@@ -1,0 +1,44 @@
+App-ZofCMS
+
+Web-framework and templating system for small-medum sites. Designed to
+be deployable on very limited hosts, i.e. no direct installation from CPAN,
+no ssh, etc.
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Build.PL
+	./Build
+	./Build test
+	./Build install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc App::ZofCMS
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-ZofCMS
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/App-ZofCMS
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/App-ZofCMS
+
+    Search CPAN
+        http://search.cpan.org/dist/App-ZofCMS
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2008 Zoffix Znet
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
