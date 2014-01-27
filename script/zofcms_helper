@@ -124,7 +124,6 @@ use warnings;
     ],
 };
 
-1;
 __END__
 END
                 close $fh_template;
