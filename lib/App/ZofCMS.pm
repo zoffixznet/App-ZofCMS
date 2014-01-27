@@ -3,7 +3,7 @@ package App::ZofCMS;
 use warnings;
 use strict;
 
-our $VERSION = '0.0225';
+# VERSION
 
 
 1;
@@ -219,57 +219,29 @@ touch C<base.tmpl> file in your "data directory" you can now access
 your web application and see a page which will display current time.
 How wonderful \o/
 
-=head1 BUG REPORTS AND CONTRIBUTIONS BY
+=head1 REPOSITORY
 
-B<Neil 'NEILB' Bowers> -- Patch to the I<Changes> file to ensure
-compliance with L<CPAN::Changes::Spec>
-
-=head1 AUTHOR
-
-Zoffix Znet, C<< <zoffix at cpan.org> >>
-(L<http://zoffix.com>, L<http://haslayout.net>)
+Fork this module on GitHub:
+L<https://github.com/zoffixznet/App-ZofCMS>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-app-zofcms at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=App-ZofCMS>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
+To report bugs or request features, please use
+L<https://github.com/zoffixznet/App-ZofCMS/issues>
 
-=head1 SUPPORT
+If you can't access GitHub, you can email your request
+to C<bug-App-ZofCMS at rt.cpan.org>
 
-You can find documentation for this module with the perldoc command.
+=head1 AUTHOR
 
-    perldoc App::ZofCMS
+Zoffix Znet <zoffix at cpan.org>
+(L<http://zoffix.com/>, L<http://haslayout.net/>)
 
-You can also look for information at:
+=head1 LICENSE
 
-=over 4
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-ZofCMS>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/App-ZofCMS>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/App-ZofCMS>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/App-ZofCMS>
-
-=back
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2008 Zoffix Znet, all rights reserved.
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
+You can use and distribute this module under the same terms as Perl itself.
+See the C<LICENSE> file included in this distribution for complete
+details.
 
 =cut
 

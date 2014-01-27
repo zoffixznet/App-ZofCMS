@@ -4,7 +4,7 @@ package App::ZofCMS::Template;
 use strict;
 use warnings;
 
-our $VERSION = '0.0225';
+# VERSION
 
 use HTML::Template;
 
@@ -25,7 +25,7 @@ sub new {
 
 sub load {
     my $self = shift;
-    
+
     my $conf = $self->conf;
     my $query = $self->query;
 
@@ -34,7 +34,7 @@ sub load {
         $query->{dir},
         $query->{page} . $conf->{zcms_template_extension},
     );
-    
+
     my $template = do $template_file
         or croak "Failed to load template file [$template_file] ($!) ($@)";
 
@@ -49,7 +49,7 @@ sub prepare_defaults {
     my $query = $self->query;
 
     my $dir_defaults = $conf->{dir_defaults}{ $query->{dir} } || {};
-    
+
     %$template = ( %$dir_defaults, %$template );
     %$template = ( %{ $conf->{template_defaults} || {} }, %$template );
 
@@ -79,10 +79,10 @@ sub prepare_defaults {
     my %unique_plug_keys;
     @unique_plug_keys{ @plug_keys } = ();
     @plug_keys = sort { $a <=> $b } keys %unique_plug_keys;
-    
+
     unshift @plug_keys, ''; # add this for 'plugins' key that doesn't have a number
     $self->unique_plug_keys( \@plug_keys );
-    
+
     for ( @plug_keys ) {
         $template->{ "plugins$_" }  = $self->sort_plugins(
             ( $conf->{template_defaults}{ "plugins$_" } || [] ),
@@ -106,9 +106,9 @@ sub assemble {
         ),
         die_on_bad_params => $template->{conf}{die_on_bad_params} || 0,
     );
-    
+
     my $data_store = $conf->{data_store};
-    
+
     $self->_exec_plugins;
 
     $html_template->param( %{ $template->{t} } );
@@ -449,7 +449,7 @@ plugin to load and the value will be treated as the value for plugin's
 The "priority" of the plugin determines in what sequence it will be
 executed among other plugins. Priority can be a negative number, the larger
 the priority, the later the plugin will be executed. Plugins with the
-same priority number are executed in non-specified order. 
+same priority number are executed in non-specified order.
 
 B<Note:> do B<NOT> use the C<App::ZofCMS::Plugin::> part of the plugin's
 module name, in other words, if you have installed
@@ -495,7 +495,7 @@ present in your ZofCMS templates (setting it in template_defaults qualifies
 as such)>
 
 =head3 C<die_on_bad_params>
- 
+
     conf => {
         die_on_bad_params => 1,
     }
@@ -586,52 +586,29 @@ They were implemented before the plugin system was in place. Currently
 I find little use for either of them. They will stay as possibilities
 in ZofCMS but I encourage you to write plugins instead.
 
-=head1 AUTHOR
+=head1 REPOSITORY
 
-Zoffix Znet, C<< <zoffix at cpan.org> >>
-(L<http://zoffix.com>, L<http://haslayout.net>)
+Fork this module on GitHub:
+L<https://github.com/zoffixznet/App-ZofCMS>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-app-zofcms at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=App-ZofCMS>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
+To report bugs or request features, please use
+L<https://github.com/zoffixznet/App-ZofCMS/issues>
 
-=head1 SUPPORT
+If you can't access GitHub, you can email your request
+to C<bug-App-ZofCMS at rt.cpan.org>
 
-You can find documentation for this module with the perldoc command.
+=head1 AUTHOR
 
-    perldoc App::ZofCMS
+Zoffix Znet <zoffix at cpan.org>
+(L<http://zoffix.com/>, L<http://haslayout.net/>)
 
-You can also look for information at:
+=head1 LICENSE
 
-=over 4
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-ZofCMS>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/App-ZofCMS>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/App-ZofCMS>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/App-ZofCMS>
-
-=back
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2008 Zoffix Znet, all rights reserved.
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
+You can use and distribute this module under the same terms as Perl itself.
+See the C<LICENSE> file included in this distribution for complete
+details.
 
 =cut
 

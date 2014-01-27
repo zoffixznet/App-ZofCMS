@@ -3,7 +3,7 @@ package App::ZofCMS::Config;
 use warnings;
 use strict;
 
-our $VERSION = '0.0225';
+# VERSION
 
 use CGI qw/:standard Vars/;
 use Carp;
@@ -13,17 +13,17 @@ require File::Spec;
 sub new {
     my $class = shift;
     my $self = bless {}, $class;
-    
+
     $self->cgi( CGI->new );
     $self->query( $self->_prepare_query );
-    
+
     return $self;
 }
 
 sub load {
     my ( $self, $conf_file, $no_page_check ) = @_;
 
-        
+
     my $conf = do $conf_file
         or croak "Failed to load config file ($!) ($@)";
 
@@ -36,12 +36,12 @@ sub load {
             $query,
             $conf,
         );
-        
+
         unless ( $is_valid_page ) {
             @$query{ qw/page dir/ } = qw|404 /|;
         }
     }
-        
+
     return $self->conf( $conf );
 }
 
@@ -54,7 +54,7 @@ sub _is_valid_page {
     unless ( ref $valid_pages eq 'HASH' ) {
         croak "Config file error: valid_pages must be a hashref";
     }
-    
+
     for ( @{ $valid_pages->{pages} || [] } ) {
         return 1
             if $_ eq $query->{dir} . $query->{page};
@@ -65,13 +65,13 @@ sub _is_valid_page {
             if $_ eq $query->{dir}
                 and -e File::Spec->catfile( $templates_dir, $query->{dir}, $query->{page} . $ext);
     }
-    
+
     return 0;
 }
 
 sub _prepare_query {
     my $self = shift;
-    
+
     my %query = Vars();
 
     unless ( defined $query{page} and length $query{page} ) {
@@ -91,7 +91,7 @@ sub _prepare_query {
     }
 
     $query{dir} =~ s/\Q..//g;
-    
+
     $query{dir} = "/$query{dir}"
         unless substr($query{dir}, 0, 1) eq '/';
 
@@ -268,7 +268,7 @@ C<index.pl?page=bar&dir=/foo/> by App::ZofCMS::Config module, note how
 the leading and ending slash was appended to the C<dir> automatically.
 
 B<Note:> personally I use Apache's C<mod_rewrite> to "fix" the query,
-in other words, the example above the URI can look like 
+in other words, the example above the URI can look like
 C<http://example.com/foo/bar>
 
 =head3 C<pages>
@@ -435,52 +435,29 @@ Returns the hashref of your main config file. Takes one optional argument
 which is a hashref, it will be appear as if it was loaded from your
 main config file -- bad idea to set it like this, in my opinion.
 
-=head1 AUTHOR
+=head1 REPOSITORY
 
-Zoffix Znet, C<< <zoffix at cpan.org> >>
-(L<http://zoffix.com>, L<http://haslayout.net>)
+Fork this module on GitHub:
+L<https://github.com/zoffixznet/App-ZofCMS>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-app-zofcms at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=App-ZofCMS>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
+To report bugs or request features, please use
+L<https://github.com/zoffixznet/App-ZofCMS/issues>
 
-=head1 SUPPORT
+If you can't access GitHub, you can email your request
+to C<bug-App-ZofCMS at rt.cpan.org>
 
-You can find documentation for this module with the perldoc command.
+=head1 AUTHOR
 
-    perldoc App::ZofCMS
+Zoffix Znet <zoffix at cpan.org>
+(L<http://zoffix.com/>, L<http://haslayout.net/>)
 
-You can also look for information at:
+=head1 LICENSE
 
-=over 4
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-ZofCMS>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/App-ZofCMS>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/App-ZofCMS>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/App-ZofCMS>
-
-=back
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2008 Zoffix Znet, all rights reserved.
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
+You can use and distribute this module under the same terms as Perl itself.
+See the C<LICENSE> file included in this distribution for complete
+details.
 
 =cut
 
