@@ -3,6 +3,7 @@ Revision history for Perl module App::ZofCMS
 1.001001  2014-01-26
     - Converted to dzil
     - Fixed RT#90093 (zofcms_helper putting 1; at the end of templates)
+    - Fixed RT#89848 (zofcms_helper generating crappy `title` value)
 
 0.0225  2013-11-01
     - Minor fixes to comply with Kwalitee game

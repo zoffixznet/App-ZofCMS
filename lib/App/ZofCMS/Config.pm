@@ -134,16 +134,18 @@ __END__
 
 =encoding utf8
 
+=for stopwords  dir perlish recurseable standalone
+
 =head1 NAME
 
 App::ZofCMS::Config - "core" part of ZofCMS - web-framework/templating system
 
-=head1 SYNOPSYS
+=head1 SYNOPSIS
 
 This module is part of "core" of ZofCMS web-framework/templating system.
 Please read L<App::ZofCMS> if you haven't done so already. The module is
-not to be used as a standalone module, thus no synopsys is provided.
-See L<CONFIGURATION FILE EXAMPLES> section below.
+not to be used as a standalone module, thus no synopsis is provided.
+See C<CONFIGURATION FILE EXAMPLES> section below.
 
 =head1 ZofCMS CONFIGURATION FILE
 
@@ -216,7 +218,8 @@ have meaning for ZofCMS core:
 
 The C<data_store> key specifies the directory (relative you C<index.pl>)
 with your "data", i.e. the L<HTML::Template> files which you can reference
-from ZofCMS templates. More on this in L<App::ZofCMS::Template> documentaion
+from ZofCMS templates. More on this in L<App::ZofCMS::Template>
+documentation
 
 =head2 C<templates>
 
@@ -226,8 +229,8 @@ from ZofCMS templates. More on this in L<App::ZofCMS::Template> documentaion
 
 Alike C<data_store>, C<templates> key points to the directory where you
 keep your ZofCMS template files which are explained in
-L<App::ZofCMS::Template> documentaion. B<Note:> the value of this key is
-refered to as "templates dir" in the documentation below.
+L<App::ZofCMS::Template> documentation. B<Note:> the value of this key is
+referred to as "templates dir" in the documentation below.
 
 =head2 C<valid_pages>
 
@@ -316,10 +319,10 @@ C<< dirs => [ '/tools/' ] >> for C<valid_pages>. On top of all that,
 you have created a file C<../zcms_site/templates/tools/stuff.tmpl> which
 is the only file in that directory.
 If user would go to C<http://example.com/index.pl?page=tools/stuff>,
-ZofCMS would interpet C<../zcms_site/templates/tools/stuff.tmpl> template
+ZofCMS would interpret C<../zcms_site/templates/tools/stuff.tmpl> template
 and display a page, any other pages would give him a 404.
 
-B<Note:> directories specified in C<dirs> arrayref are not recursable, i.e.
+B<Note:> directories specified in C<dirs> arrayref are not recurseable, i.e.
 specifying C<< dirs => [ '/' ] >>  enable pages in '/tools/'. Later, a
 special flag to indicate recursing may be implemented.
 
@@ -342,12 +345,12 @@ special flag to indicate recursing may be implemented.
     }
 
 These are the "defaults" for all of ZofCMS templates of your ZofCMS site.
-In other words (refering to the example above) if you don't set key C<foo>
+In other words (referring to the example above) if you don't set key C<foo>
 in any of your ZofCMS templates, it will take on its default value C<bar>.
 
 The exception are special keys (which are described in
 L<App::ZofCMS::Template>): C<t>, C<d>, C<conf> and C<plugins>, their
-B<contents> will act as defaults. In other words, (again refering to the
+B<contents> will act as defaults. In other words, (again referring to the
 sample above) if you set C<< t => { foo => 'bar' } >> in your ZofCMS
 template, the result will be as if you have set
 C<< t => { foo => 'bar', top => 'blah' } >>. Same applies for special keys
@@ -377,11 +380,11 @@ used.
 
 The C<dir_defaults> key functions exactly the same as C<template_defaults>
 (see above) with one exception, it's directory-specific. Once again, it
-takes a hashref as a value, the keys of that hashref are dirrectories for
+takes a hashref as a value, the keys of that hashref are directories for
 which you want to apply the defaults specified as values, which are hashrefs
 identical to C<template_defaults>.
 
-By "directory" is ment the C<dir> query parameter that is calculated
+By "directory" is meant the C<dir> query parameter that is calculated
 as is described in section B<Note on page and dir query parameters>
 above.
 

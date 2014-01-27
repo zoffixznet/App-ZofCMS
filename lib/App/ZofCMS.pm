@@ -9,17 +9,30 @@ use strict;
 1;
 __END__
 
+=for stopwords Drupal Wordpress codebase  ssh  dir  foo webpage
+
 =encoding utf8
 
 =head1 NAME
 
 App::ZofCMS - web framework and templating system for small-medium sites.
 
-=head1 SYNOPSYS
+=head1 SYNOPSIS
 
 This module is just the main documentation for ZofCMS framework. See
 L<USING THE FRAMEWORK> section below for explanation of how to use this
 framework.
+
+=head1 WARNING!!!
+
+Do B<NOT> use this framework for production code.
+At worst, this framework will be no longer maintained; at best, it will
+be significantly rewritten, breaking the API. It exists in the current
+state only to support the existing codebase.
+
+=head1 SEE ALSO
+
+L<Dancer>, L<Dancer2>, L<Mojolicious>, and of course, L<Catalyst>
 
 =head1 DESCRIPTION
 
@@ -33,7 +46,7 @@ a great framework, not just for web, and it offers far more functionality
 than ZofCMS ever will.
 
 ZofCMS is plugin based. If you create your own plugins, please upload them
-to L<App::ZofCMS::Plugin> namespace or email it to me (L<zoffix@cpan.org>)
+to L<App::ZofCMS::Plugin> namespace or email it to me (C<zoffix@cpan.org>)
 and I will package it, upload it, and give you corresponding credits.
 
 ZofCMS currently uses L<HTML::Template> as a module to interpret HTML
@@ -44,9 +57,9 @@ Despite the "core" of the framework along with all of its plugins being
 on CPAN there is a helper script (C<zofcms_helper>) which can produce
 a ready-for-upload set of files which you can simply upload to your server
 without having to install anything from CPAN on the server itself. See
-L<perldoc zofcms_helper>.
+C<perldoc zofcms_helper>.
 
-=head1 HYSTORY
+=head1 HISTORY
 
 This section does not say anything useful, you can skip it if you are
 not interested in what made me create ZofCMS.
@@ -144,7 +157,7 @@ ZofCMS directory/file setup is arranged to have one directory web
 accessible; that one will contain C<index.pl> along with any CSS/JS files
 or images that will be on your website. Another directory will not be
 web accessible; here you will keep your ZofCMS templates along with page
-templates (i.e. L<HTML::Templates>, or "data") and the config file.
+templates (i.e. L<HTML::Template>, or "data") and the config file.
 
 As example we will want our site to be in C</var/www/testsite/> directory,
 thus we go (assuming we are on the system which has C<mkdir> and C<cd>):

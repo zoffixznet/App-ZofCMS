@@ -1,13 +1,15 @@
-package App::ZofCMS;
+package App::ZofCMS::Plugin;
 
 use warnings;
 use strict;
 
 # VERSION
 
-
 1;
 __END__
+
+=for stopwords ModuleName foo pm tmpl
+
 
 =encoding utf8
 
@@ -15,7 +17,7 @@ __END__
 
 App::ZofCMS::Plugin - documentation for ZofCMS plugin authors
 
-=head1 SYNOPSYS
+=head1 SYNOPSIS
 
     package App::ZofCMS::Plugins::QueryToTemplate;
 

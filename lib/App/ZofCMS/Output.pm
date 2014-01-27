@@ -67,7 +67,7 @@ __END__
 
 App::ZofCMS::Output - "core" part of ZofCMS - web-framework/templating system
 
-=head1 SYNOPSYS
+=head1 SYNOPSIS
 
 N/A
 

@@ -112,7 +112,9 @@ if ( $opts{pages} ) {
             }
             else {
                 my $body_file = File::Spec->catfile( @dirs );
-                my $title = join ' - ', map ucfirst, reverse split '/', $page;
+                my $title = join ' - ', map do { s/-(.)/ \u$1/g; $_ },
+                    map ucfirst, grep length, reverse split m{/}, $page;
+
                 print $fh_template <<"END";
 use strict;
 use warnings;

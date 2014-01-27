@@ -97,7 +97,6 @@ sub assemble {
 
     my $template = $self->template;
     my $conf = $self->conf;
-    my $query = $self->query;
 
     my $html_template = HTML::Template->new(
         filename => File::Spec->catfile(
@@ -309,15 +308,18 @@ sub unique_plug_keys {
 }
 
 1;
+
 __END__
 
 =encoding utf8
+
+=for stopwords ModuleName foo perlish pm subref tmpl
 
 =head1 NAME
 
 App::ZofCMS::Template - "core" part of ZofCMS - web-framework/templating system
 
-=head1 SYNOPSYS
+=head1 SYNOPSIS
 
 Sample ZofCMS template named 'foo.tmpl' in "templates" directory
 (see L<App::ZofCMS::Config>):
@@ -414,7 +416,7 @@ Most plugins will populate this hashref when they are executed.
         },
     }
 
-The special key C<d> (read B<d>ata) is exactly the same as C<t> key execept
+The special key C<d> (read B<d>ata) is exactly the same as C<t> key except
 none of its keys/values will be interpolated into any templates. The
 purpose of this key is to pass around data between the templates and
 plugins. Currently, I did not find this key useful, however, it is there
@@ -484,7 +486,7 @@ is a hashref keys of which are also special.
 
 The C<base> key in C<conf> hashref specifies the "base" template to use.
 This is the "base" template mentioned above in the description of
-"first level" keys of ZofCMS templatee hashref.
+"first level" keys of ZofCMS template hashref.
 The value of C<base> key must be a scalar containing a filename of the
 L<HTML::Template> located in "data store" directory. Normally, this would
 be an L<HTML::Template> template used for your entire site. Of course, this
@@ -504,7 +506,7 @@ Takes either true or false values, defaults to a false value. As ZofCMS
 matured, especially with the invention of plugins like
 L<App::ZofCMS::Plugin::QueryToTemplate>, use of this option became very
 limited. What it basically does (when set to a true value) is make
-your application die every time ZofCMS tries to set a non-existant
+your application die every time ZofCMS tries to set a non-existent
 C<tmpl_var> in your L<HTML::Template> templates.
 
 =head3 C<exec_before>
