@@ -134,8 +134,6 @@ __END__
 
 =encoding utf8
 
-=for stopwords  dir perlish recurseable standalone
-
 =head1 NAME
 
 App::ZofCMS::Config - "core" part of ZofCMS - web-framework/templating system
@@ -144,8 +142,7 @@ App::ZofCMS::Config - "core" part of ZofCMS - web-framework/templating system
 
 This module is part of "core" of ZofCMS web-framework/templating system.
 Please read L<App::ZofCMS> if you haven't done so already. The module is
-not to be used as a standalone module, thus no synopsis is provided.
-See C<CONFIGURATION FILE EXAMPLES> section below.
+not to be used as a standalone module, thus no synopsys is provided.
 
 =head1 ZofCMS CONFIGURATION FILE
 
@@ -218,8 +215,7 @@ have meaning for ZofCMS core:
 
 The C<data_store> key specifies the directory (relative you C<index.pl>)
 with your "data", i.e. the L<HTML::Template> files which you can reference
-from ZofCMS templates. More on this in L<App::ZofCMS::Template>
-documentation
+from ZofCMS templates. More on this in L<App::ZofCMS::Template> documeantation
 
 =head2 C<templates>
 
@@ -229,8 +225,8 @@ documentation
 
 Alike C<data_store>, C<templates> key points to the directory where you
 keep your ZofCMS template files which are explained in
-L<App::ZofCMS::Template> documentation. B<Note:> the value of this key is
-referred to as "templates dir" in the documentation below.
+L<App::ZofCMS::Template> documeantation. B<Note:> the value of this key is
+refered to as "templates dir" in the documeantation below.
 
 =head2 C<valid_pages>
 
@@ -252,7 +248,7 @@ The C<valid_pages> specify which particular pages are available on your
 site. If the page provided to C<index.pl> via C<page> and (optionally)
 C<dir> parameter does not match C<valid_page> the user will be presented
 with a 404 - Not Found page. The C<valid_pages> value is a hashref with
-two keys each of which takes an arrayref as an argument; they are explained
+two keys each of which takes an arrayref as an argumeant; they are explained
 a little further below, but first:
 
 =head3 Note on C<page> and C<dir> query parameters
@@ -305,7 +301,7 @@ pages from C<pages> arrayref failed then the check against C<dirs> is done.
     ],
 
 The check for valid pages using C<dirs> arrayref is a bit different and
-serves as a shortcut of some sort. What is done with the elements in
+serves as a shortcut of some sort. What is done with the elemeants in
 C<dirs> arrayref is ZofCMS makes a path and a filename in the following
 form: $templates_dir (see above) + $dir_param (query parameter C<dir>)
 + $page_param (query parameter C<page>) + C<'.tmpl'> then it checks
@@ -322,9 +318,9 @@ If user would go to C<http://example.com/index.pl?page=tools/stuff>,
 ZofCMS would interpret C<../zcms_site/templates/tools/stuff.tmpl> template
 and display a page, any other pages would give him a 404.
 
-B<Note:> directories specified in C<dirs> arrayref are not recurseable, i.e.
+B<Note:> directories specified in C<dirs> arrayref are not recursable, i.e.
 specifying C<< dirs => [ '/' ] >>  enable pages in '/tools/'. Later, a
-special flag to indicate recursing may be implemented.
+special flag to indicate recursing may be implemeanted.
 
 =head2 C<template_defaults>
 
@@ -345,12 +341,12 @@ special flag to indicate recursing may be implemented.
     }
 
 These are the "defaults" for all of ZofCMS templates of your ZofCMS site.
-In other words (referring to the example above) if you don't set key C<foo>
+In other words (refering to the example above) if you don't set key C<foo>
 in any of your ZofCMS templates, it will take on its default value C<bar>.
 
 The exception are special keys (which are described in
 L<App::ZofCMS::Template>): C<t>, C<d>, C<conf> and C<plugins>, their
-B<contents> will act as defaults. In other words, (again referring to the
+B<contents> will act as defaults. In other words, (again refering to the
 sample above) if you set C<< t => { foo => 'bar' } >> in your ZofCMS
 template, the result will be as if you have set
 C<< t => { foo => 'bar', top => 'blah' } >>. Same applies for special keys
@@ -397,7 +393,7 @@ processed.
 
     { zcms_template_extension => '.tmpl', }
 
-B<Optional>. The C<zcms_template_extension> key takes a string as an argument. This string
+B<Optional>. The C<zcms_template_extension> key takes a string as an argumeant. This string
 represents the extensions for your ZofCMS Template files. B<Defaults to:> C<.tmpl>
 
 =head1 METHODS
@@ -411,7 +407,7 @@ is described in L<App::ZofCMS::Template>
 
     my $cgi = $config->cgi;
 
-Takes no arguments, returns a L<CGI> object which is created during
+Takes no argumeants, returns a L<CGI> object which is created during
 loading of your main config file.
 
 =head2 C<query>
@@ -420,13 +416,13 @@ loading of your main config file.
 
     $config->query( { new => 'query', param => 'value' } );
 
-Takes an optional argument which must be a hashref. The keys of this
+Takes an optional argumeant which must be a hashref. The keys of this
 hashref will appear as if they are query parameters and the values will
 appear as if they are values of those parameters by any
 plugins/exec_before/exec code which processes query after your call.
 Returns a hashref keys of which represent query parameters and values
 are obviously values of those parameters. B<Note:> this hashref
-is created from L<CGI>'s C<Vars()> function. Refer to L<CGI> documentation
+is created from L<CGI>'s C<Vars()> function. Refer to L<CGI> documeantation
 if something doesn't look right.
 
 =head2 C<conf>
@@ -434,7 +430,7 @@ if something doesn't look right.
     my $conf = $config->conf;
     $config->conf( { data_store => '../zcms_site/data' } );
 
-Returns the hashref of your main config file. Takes one optional argument
+Returns the hashref of your main config file. Takes one optional argumeant
 which is a hashref, it will be appear as if it was loaded from your
 main config file -- bad idea to set it like this, in my opinion.
 
@@ -463,4 +459,3 @@ See the C<LICENSE> file included in this distribution for complete
 details.
 
 =cut
-

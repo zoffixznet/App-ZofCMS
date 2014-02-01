@@ -5,11 +5,8 @@ use strict;
 
 # VERSION
 
-
 1;
 __END__
-
-=for stopwords Drupal Wordpress codebase  ssh  dir  foo webpage
 
 =encoding utf8
 
@@ -19,24 +16,13 @@ App::ZofCMS - web framework and templating system for small-medium sites.
 
 =head1 SYNOPSIS
 
-This module is just the main documentation for ZofCMS framework. See
+This module is just the main documeantation for ZofCMS framework. See
 L<USING THE FRAMEWORK> section below for explanation of how to use this
 framework.
 
-=head1 WARNING!!!
-
-Do B<NOT> use this framework for production code.
-At worst, this framework will be no longer maintained; at best, it will
-be significantly rewritten, breaking the API. It exists in the current
-state only to support the existing codebase.
-
-=head1 SEE ALSO
-
-L<Dancer>, L<Dancer2>, L<Mojolicious>, and of course, L<Catalyst>
-
 =head1 DESCRIPTION
 
-ZofCMS stands for "Zoffix's Content Management System", however I prefer
+ZofCMS stands for "Zoffix's Content Managemeant System", however I prefer
 it to be just a name. It is a small web framework/templating system designed
 to be easily installed and workable on limited severs, i.e. the ones that do
 not allow you to install perl modules from CPAN, don't have ssh and
@@ -59,7 +45,7 @@ a ready-for-upload set of files which you can simply upload to your server
 without having to install anything from CPAN on the server itself. See
 C<perldoc zofcms_helper>.
 
-=head1 HISTORY
+=head1 HYSTORY
 
 This section does not say anything useful, you can skip it if you are
 not interested in what made me create ZofCMS.
@@ -77,7 +63,7 @@ to make all those products displayed with only one L<HTML::Template>
 template proved to be flexible, extendable and maintainable and that's
 exactly from where ZofCMS template format came.
 
-The last site I coded before starting to implement ZofCMS was a private
+The last site I coded before starting to implemeant ZofCMS was a private
 web application which had a message board along with a few other features.
 Mostly everything was coded from scratch once more... The final breaking
 point when a few weeks later I was asked to add two sections for file
@@ -136,7 +122,7 @@ in the templates and display the page to the user.
 =head2 FIRST TIME USE
 
 Ok, if you are reading this I can assume you want to give ZofCMS a whirl.
-This documentation describes how to install/use it from CPAN. I am also
+This documeantation describes how to install/use it from CPAN. I am also
 planing to put up a ZofCMS tarball on L<http://web-tools.cc/tools/ZofCMS/>
 from which you can get started without touching CPAN (for the most part).
 At the time of this writing that webpage is not yet up.
@@ -150,7 +136,7 @@ script can be found by running C<perldoc zofcms_helper>.
 =head2 INITIAL SETUP
 
 Pick a directory in which you want to create ZofCMS "base" from which
-you would start working on your site. This documentation assumes that you
+you would start working on your site. This documeantation assumes that you
 are doing all this on a local, fully functional box.
 
 ZofCMS directory/file setup is arranged to have one directory web
@@ -195,10 +181,10 @@ is the "base" L<HTML::Template> file, it will be filled with virtually
 all the keys from ZofCMS template. In the C<templates> directory you will
 find C<index.tmpl> and C<404.tmpl>
 
-B<Before we proceed any further> I advise you to read documentation
+B<Before we proceed any further> I advise you to read documeantation
 for L<App::ZofCMS::Config> and L<App::ZofCMS::Template> as I am not going
-to explain what each key means; it is explained in aforementioned
-documentation in detail.
+to explain what each key means; it is explained in aforemeantioned
+documeantation in detail.
 
 =head2 FIRST PAGE
 
@@ -206,7 +192,7 @@ Now, let's create our first page. Let it be named something original,
 like "foo" :)
 
 Open up your config file and under valid pages add '/foo'. Considering
-you *did* read documentation for L<App::ZofCMS::Config> you'll know exactly
+you *did* read documeantation for L<App::ZofCMS::Config> you'll know exactly
 what to do at this point.
 
 now go to your "core dir" (which will be /var/www/testsite/web_site/
@@ -257,4 +243,3 @@ See the C<LICENSE> file included in this distribution for complete
 details.
 
 =cut
-
