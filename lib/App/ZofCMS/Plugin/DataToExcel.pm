@@ -68,7 +68,7 @@ App::ZofCMS::Plugin::DataToExcel - ZofCMS plugin to output data as an Excel file
             [ qw/Foo2 Bar2 Baz2/ ],
         ],
 
-        # this argumeant is optional; by default not specified
+        # this argument is optional; by default not specified
         options     => {
             text_wrap           => 1,
             calc_column_widths  => 1,
@@ -76,7 +76,7 @@ App::ZofCMS::Plugin::DataToExcel - ZofCMS plugin to output data as an Excel file
             center_first_row    => 1,
         },
 
-        # argumeants below are optional; defaults are shown
+        # arguments below are optional; defaults are shown
         trigger     => 1,
         filename    => 'ExcelData.xls',
         no_exit     => 0,
@@ -88,7 +88,7 @@ The module is a plugin for L<App::ZofCMS> that provides means to easily
 export an arrayref of arrayrefs (your data) as an Excel file presented
 to the user.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>. Familarity with
 L<Spreadsheet::DataToExcel> would be helpful.
 
@@ -110,7 +110,7 @@ plugins to execute.
             [ qw/Foo2 Bar2 Baz2/ ],
         ],
 
-        # this argumeant is optional; by default not specified
+        # this argument is optional; by default not specified
         options     => {
             text_wrap           => 1,
             calc_column_widths  => 1,
@@ -118,7 +118,7 @@ plugins to execute.
             center_first_row    => 1,
         },
 
-        # argumeants below are optional; defaults are shown
+        # arguments below are optional; defaults are shown
         trigger     => 1,
         filename    => 'ExcelData.xls',
         no_exit     => 0,
@@ -167,7 +167,7 @@ C<$t>, C<$q>, and C<$config> (in that order), where C<$t> is ZofCMS
 Template hashref, C<$q> is query parameter hashref, and C<$config> is
 L<App::ZofCMS::Config> object.
 
-The arrayref must be in the same format as the I<second> argumeant
+The arrayref must be in the same format as the I<second> argument
 of L<Spreadsheet::DataToExcel>'s C<dump()> method.
 
 =head3 C<options>
@@ -181,8 +181,8 @@ of L<Spreadsheet::DataToExcel>'s C<dump()> method.
         },
     ...
 
-B<Optional>. Takes a hashref of argumeants that specify how to format
-the Excel file. See the I<third> argumeant for
+B<Optional>. Takes a hashref of arguments that specify how to format
+the Excel file. See the I<third> argument for
 L<Spreadsheet::DataToExcel>'s C<dump()>'s method for details.
 B<By default is not specified>
 
@@ -238,7 +238,7 @@ to the Excel file. B<Defaults to:> C<0>
     </tmpl_if>
 
 Should an error occur (e.g. when you give the plugin invalid
-C<data> argumeant), the plugin will place the description of
+C<data> argument), the plugin will place the description of
 the error into C<plug_data_to_excel_error> key of C<{t}> ZofCMS
 Template special key.
 

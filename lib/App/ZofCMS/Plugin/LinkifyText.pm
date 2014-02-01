@@ -96,7 +96,7 @@ __END__
 
 =head1 NAME
 
-App::ZofCMS::Plugin::LinkifyText - plugin to convert links in plain text into proper HTML <a> elemeants
+App::ZofCMS::Plugin::LinkifyText - plugin to convert links in plain text into proper HTML <a> elements
 
 =head1 SYNOPSIS
 
@@ -125,9 +125,9 @@ In HTML::Template template:
 =head1 DESCRIPTION
 
 The module is a plugin for L<App::ZofCMS> that provides means convert
-URIs found in plain text into proper <a href=""> HTML elemeants.
+URIs found in plain text into proper <a href=""> HTML elements.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
@@ -226,7 +226,7 @@ If set to a subref, the sub's C<@_> will contain C<$t>, C<$q>,
 and C<$config> (in that order), where C<$t> is ZofCMS Template hashref,
 C<$q> is query parameter hashref, and C<$config> is L<App::ZofCMS::Config>
 object. The return value from the sub can be any valid value accepted
-by the C<text> argumeant (except the subref) and the plugin will proceed
+by the C<text> argument (except the subref) and the plugin will proceed
 as if the returned value was assigned to C<text> in the first place
 (including the C<undef>, upon which the plugin will stop executing).
 
@@ -257,7 +257,7 @@ key (see the description for these below).
             { text => '<a href="http://zoffix.com/">http://zoffix.com/</a>' },
     };
 
-If set to an arrayref, each elemeant of that arrayref will be taken
+If set to an arrayref, each element of that arrayref will be taken
 as a string that needs to be linkified. The output will be stored
 into C<key> key under C<cell> first-level key, and that output will be
 an arrayref of hashrefs. Each hashref will have only one key - C<text> -
@@ -367,7 +367,7 @@ processing URIs. B<Defaults to:> C<1>
 B<Optional>. Applies only when C<encode_entities> (see above) is set
 to a true value. Takes either true or false values. When set to
 a true value, the plugin will convert anything that matches C</\r?\n/>
-into HTML <br> elemeant. B<Defaults to:> C<1>
+into HTML <br> element. B<Defaults to:> C<1>
 
 =head3 C<cell>
 
@@ -379,7 +379,7 @@ into HTML <br> elemeant. B<Defaults to:> C<1>
 B<Optional>. Takes a literal string as a value. Specifies the name
 of the B<first-level> key in ZofCMS Template hashref into which to put
 the result; this key must point to either an undef value or a hashref.
-See C<key> argumeant below as well.
+See C<key> argument below as well.
 B<Defaults to:> C<t>
 
 =head3 C<key>

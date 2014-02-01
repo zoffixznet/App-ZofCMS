@@ -89,7 +89,7 @@ In your L<HTML::Template> template:
 The module is a plugin for L<App::ZofCMS>. It provides basic functionality to fetch a random
 URI with L<LWP::UserAgent> and stick the content into ZofCMS Template hashref.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE AND ZofCMS TEMPLATE FIRST-LEVEL KEYS
 
@@ -137,7 +137,7 @@ take precedence. The possible keys/values of that hashref are as follows:
 
 B<Mandatory>. Takes a string, subref or L<URI> object as a value. Specifies the URI to fetch.
 When value is a subref that subref will be executed and its return value will be given to
-C<uri> argumeant. Subref's C<@_> will contain the following (in that order): ZofCMS Template hashref, hashref of query parameters and L<App::ZofCMS::Config> object. B<Plugin will stop>
+C<uri> argument. Subref's C<@_> will contain the following (in that order): ZofCMS Template hashref, hashref of query parameters and L<App::ZofCMS::Config> object. B<Plugin will stop>
 if the C<uri> is undefined; that also means that you can return an C<undef> from your subref
 to stop processing.
 
@@ -149,7 +149,7 @@ B<Optional>. See also C<t_key> parameter below.
 Takes a string as a value. This string represents the name of the key in
 ZofCMS Template where to put the fetched content (or error). B<Note:> the errors will
 be indicated by C<$t_name . '_error'> L<HTML::Template> variable, where C<$t_name> is the value
-of C<t_name> argumeant.
+of C<t_name> argument.
 See SYNOPSIS for examples. B<Defaults to:> C<plug_basic_lwp> (and
 the errors will be in C<plug_basic_lwp_error>
 
@@ -191,7 +191,7 @@ B<Note:> the "fixer" is not that smart, here's the code; feel free not to use it
     ],
 
 B<Optional>. Takes an arrayref as a value. This arrayref will be directly dereference into
-L<LWP::UserAgent> contructor. See L<LWP::UserAgent>'s documeantation for possible values.
+L<LWP::UserAgent> contructor. See L<LWP::UserAgent>'s documentation for possible values.
 B<Defaults to:>
 
     [
@@ -201,7 +201,7 @@ B<Defaults to:>
 
 =head1 HTML::Template VARIABLES
 
-The code below assumes default values for C<t_name> and C<t_key> argumeants (see C<plug_basic_lwp> hashref keys' description).
+The code below assumes default values for C<t_name> and C<t_key> arguments (see C<plug_basic_lwp> hashref keys' description).
 
     <tmpl_if name='plug_basic_lwp_error'>
         <p>Error fetching content: <tmpl_var name='plug_basic_lwp_error'></p>

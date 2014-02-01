@@ -98,7 +98,7 @@ The module is a plugin for L<App::ZofCMS>. It provides means to include
 CSS (Cascading Style Sheets) code snippets with syntax
 highlights on your pages.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 USED FIRST-LEVEL ZofCMS TEMPLATE KEYS
@@ -231,7 +231,7 @@ Here are the classes that you can define in your stylesheet:
 =item *
 
 C<css-code> - this is actually the class name that will be set on the
-C<< <pre>> >> elemeant if you have that option turned on.
+C<< <pre>> >> element if you have that option turned on.
 
 =item *
 
@@ -251,7 +251,7 @@ C<ch-v> - Values
 
 =item *
 
-C<ch-ps> - Pseudo-selectors and pseudo-elemeants
+C<ch-ps> - Pseudo-selectors and pseudo-elements
 
 =item *
 
@@ -287,7 +287,7 @@ C<ch-n> - The line numbers inserted when C<nnn> key is set to a true value
             font-weight: bold;
             color: #880;
         }
-        .ch-ps {                /* Pseudo-selectors and Pseudo-elemeants */
+        .ch-ps {                /* Pseudo-selectors and Pseudo-elements */
             font-weight: bold;
             color: #11F;
         }

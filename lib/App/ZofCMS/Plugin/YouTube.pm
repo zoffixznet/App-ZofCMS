@@ -408,13 +408,13 @@ Update, Delete) interface for managing YouTube videos. The plugin provides a for
 user can enter the title of the video, its YouTube URI and a description. That form is stored
 in a SQL database by the plugin and can be displayed as a list.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
 L<App::ZofCMS::Template>
 
 =head1
 
 When C<create_table> option is turned on (see below) the plugin will create the following
-table where C<table_name> is derived from C<table> argumeant in C<plug_youtube> (see below).
+table where C<table_name> is derived from C<table> argument in C<plug_youtube> (see below).
 
     CREATE TABLE table_name (
         title       TEXT,
@@ -539,9 +539,9 @@ C<plug_youtube>
     h_level => 3,
 
 B<Optional>. When generating a list of YouTube videos, plugin will use HTML C<< <h?> >>
-elemeants (see C<GENERATED HTML CODE> section below).
+elements (see C<GENERATED HTML CODE> section below).
 The C<h_level> takes an integer between 1 and 6 and that value specifies what
-C<< <h?> >> level to generate. B<Defaults to:> C<3> (generate C<< <h3> >> elemeants)
+C<< <h?> >> level to generate. B<Defaults to:> C<3> (generate C<< <h3> >> elements)
 
 =head3 C<size>
 
@@ -549,9 +549,9 @@ C<< <h?> >> level to generate. B<Defaults to:> C<3> (generate C<< <h3> >> elemea
     # or
     size => [ 300, 200 ],
 
-B<Optional>. Takes either an integer from 0 to 3 or an arrayref with two elemeants that are
-positive intergers as a value. When the value is an arrayref the first elemeant is treated
-as the value of C<width=""> attribute and the second elemeant is treated as the value for
+B<Optional>. Takes either an integer from 0 to 3 or an arrayref with two elements that are
+positive intergers as a value. When the value is an arrayref the first element is treated
+as the value of C<width=""> attribute and the second element is treated as the value for
 C<height=""> attribute. These two control the size of the video. You can also use
 integers from 0 to 3 to specify a "prefabricated" size (sort'f like a shortcut). The relation
 between the integers and the sizes they represent is shown below. B<Defaults to:> C<1> (
@@ -603,7 +603,7 @@ creates a problem for you.
     },
 
 B<Optional>. You can set a filter when displaying the list of videos. The C<filter>
-argumeant takes a hashref as a value. All keys take a regex (C<qr//>) as a value. The field
+argument takes a hashref as a value. All keys take a regex (C<qr//>) as a value. The field
 referenced by the key B<must match> the regex in order for the video to be put in the list
 of videos. B<By default> is not specified. You can specify either 1 or all 3 keys. Possible
 keys and what they reference are as follows:

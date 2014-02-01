@@ -71,7 +71,7 @@ In your ZofCMS Template or Main Config File:
 
     plug_send_file => [
         '../zcms_site/config.txt',  # filename to send; this one is outside the webdir
-        'attachmeant',               # optional to set content-disposition to attachment
+        'attachment',               # optional to set content-disposition to attachment
         'text/plain',               # optional to set content-type instead of guessing one
         'LOL.txt',                  # optional to set filename instead of using same as original
     ],
@@ -85,12 +85,12 @@ In your HTML::Template template:
 =head1 DESCRIPTION
 
 The module is a plugin for L<App::ZofCMS> that provides means for flexible sending of files
-(e.g. sending it as an attachmeant (for download) or changing the filename), most important
+(e.g. sending it as an attachment (for download) or changing the filename), most important
 feature of the plugin is that you can use it to send files outside of web-accessible
 directory which in conjunction with say L<App::ZofCMS::Plugin::UserLogin> can provide user
 account restricted file sending.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
 L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
@@ -116,7 +116,7 @@ make sure that all the required plugins had their chance to execute BEFORE this 
 
     plug_send_file => [
         '../zcms_site/config.txt',  # filename to send; this one is outside the webdir
-        'attachmeant',               # optional to set content-disposition to attachment
+        'attachment',               # optional to set content-disposition to attachment
         'text/plain',               # optional to set content-type instead of guessing one
         'LOL.txt',                  # optional to set filename instead of using same as original
     ],
@@ -136,7 +136,7 @@ object.
 
 When set to a string it's the same as setting to an arrayref with just one value in it.
 
-Here are how arrayref elemeants are interpreted:
+Here are how arrayref elements are interpreted:
 
 =head3 FIRST ELEMENT
 
@@ -152,10 +152,10 @@ to you to ensure that it's safe.
 
     plug_send_file => [
         '../zcms_site/config.txt',
-        'attachmeant',
+        'attachment',
     ],
 
-B<Optional>. Specifies C<Content-Disposition> type, which can be C<inline>, C<attachmeant> or
+B<Optional>. Specifies C<Content-Disposition> type, which can be C<inline>, C<attachment> or
 an extension-token. See RFC 2183 for details.
 B<Note:> this parameter only takes the TYPE not the whole header (which isn't supported by
 the plugin so you'll have to modify it if you need this). B<Defaults to:> C<inline>, you can

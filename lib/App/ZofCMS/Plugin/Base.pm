@@ -116,7 +116,7 @@ object.
 
     sub _defaults { qw/foo bar baz beer/ }
 
-The C<_defaults> sub needs to return a list of default argumeants in a
+The C<_defaults> sub needs to return a list of default arguments in a
 form of key/value pairs. By default it returns an empty list.
 
 =head2 C<_do>
@@ -173,8 +173,8 @@ This sub (shown above) has marginally narrower spectrum of usability
 as opposed to the rest of this module; nevertheless, I found needing
 it way too often. The sub is an accessor to a connected C<DBI>'s
 database handle that autoconnects if it hasn't already. Note that the
-sub expects C<dns>, C<user>, C<pass> and C<opt> argumeants located
-in C<< $self->{CONF} >> hashref. For descriptionof these argumeants,
+sub expects C<dns>, C<user>, C<pass> and C<opt> arguments located
+in C<< $self->{CONF} >> hashref. For descriptionof these arguments,
 see L<DBI>'s C<connect_cached()> method.
 
 =head1 MOAR!
@@ -184,7 +184,7 @@ base class.
 
 =head1 DOCUMENTATION FOR PLUGINS
 
-Below is a "template" documeantation. If you're going to use it, make
+Below is a "template" documentation. If you're going to use it, make
 sure to read through the entire thing as some things may not apply to
 your plugin; I've added those bits as they are very common in the
 plugins that I write, some of them (but not all) I marked with
@@ -194,7 +194,7 @@ word C<[EDIT]>.
 
     The module is a plugin for L<App::ZofCMS> that provides means to [EDIT].
 
-    This documeantation assumes you've read L<App::ZofCMS>,
+    This documentation assumes you've read L<App::ZofCMS>,
     L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
     =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
@@ -248,8 +248,8 @@ word C<[EDIT]>.
 
 =head1 DBI BIT OF DOCUMENTATION FOR PLUGINS
 
-The following is the documeantation I use for the L<DBI> configuration
-part of argumeants that are used by L<DBI>-using modules:
+The following is the documentation I use for the L<DBI> configuration
+part of arguments that are used by L<DBI>-using modules:
 
     =head3 C<dsn>
 
@@ -258,7 +258,7 @@ part of argumeants that are used by L<DBI>-using modules:
         ...
 
     B<Mandatory>. The C<dsn> key will be passed to L<DBI>'s
-    C<connect_cached()> method, see documeantation for L<DBI> and
+    C<connect_cached()> method, see documentation for L<DBI> and
     C<DBD::your_database> for the correct syntax for this one.
     The example above uses MySQL database called C<test> that is
     located on C<localhost>.

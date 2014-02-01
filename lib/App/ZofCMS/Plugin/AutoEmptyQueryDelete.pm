@@ -51,7 +51,7 @@ by writing:
     do_something
         if exists $q->{foo};
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 WHAT DOES THE PLUGIN DO
 

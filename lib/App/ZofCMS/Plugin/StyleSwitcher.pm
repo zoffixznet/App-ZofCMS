@@ -283,7 +283,7 @@ a scalar as a value that contains the DSN for your database. See L<DBI> for deta
     user => 'test',
     pass => 'test',
 
-B<Mandatory>. The C<user> and C<pass> argumeants specify the user name (login) and password
+B<Mandatory>. The C<user> and C<pass> arguments specify the user name (login) and password
 for your database.
 
 =head3 C<opt>
@@ -291,7 +291,7 @@ for your database.
     opt => { RaiseError => 1, AutoCommit => 1 },
 
 B<Optional>. The C<opt> key takes a hashref as a value. This hashref will be directly
-passed as "additional argumeants" to L<DBI>'s C<connect_cached()> method. See L<DBI> for
+passed as "additional arguments" to L<DBI>'s C<connect_cached()> method. See L<DBI> for
 details. B<Defaults to:> C<< { RaiseError => 1, AutoCommit => 1 }, >>
 
 =head3 C<table>
@@ -364,7 +364,7 @@ find the particular user in the database it will make the C<default_style> style
     xhtml => 0,
 
 B<Optional>. Takes either true or false values. When set to a true value will close
-C<< <link> >> elemeants with an extra C</> to keep it XHTML friendly. B<Defaults to>: C<0>
+C<< <link> >> elements with an extra C</> to keep it XHTML friendly. B<Defaults to>: C<0>
 
 =head3 C<styles>
 
@@ -376,9 +376,9 @@ C<< <link> >> elemeants with an extra C</> to keep it XHTML friendly. B<Defaults
 B<Mandatory>. Takes a hashref as a value. The keys of a that hashref are the names of your
 styles. The name of the key is what you'd pass as a value of a query parameter indicated by
 plugin's C<q_name> parameter. The value can be either a string or an arrayref. If the value
-is a string then it will be converted into an arrayref with just that elemeant in it. Each
-elemeant of that arrayref will be converted into a C<< <link> >> element where the C<href="">
-attribute will be set to that elemeant of the arrayref. Each element can contain string
+is a string then it will be converted into an arrayref with just that element in it. Each
+element of that arrayref will be converted into a C<< <link> >> element where the C<href="">
+attribute will be set to that element of the arrayref. Each element can contain string
 C<[IE]> (including the square brackets) as the first four characters, in that case
 the C<href=""> will be wrapped in C<< <!--[if IE]> >> conditional comments (if you don't
 know what those are, see: L<http://haslayout.net/condcom>).
@@ -392,7 +392,7 @@ Note: examples include the default C<t_prefix> in names of C<< <tmpl_var> >>s.
 
     <tmpl_var name="style_switcher_style">
 
-The C<style> variable will contain appropriate C<< <link> >> elemeants. You'd want to put
+The C<style> variable will contain appropriate C<< <link> >> elements. You'd want to put
 this variable somewhere in HTML C<< <head> >>
 
 =head2 C<toggle>

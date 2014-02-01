@@ -90,7 +90,7 @@ App::ZofCMS::Plugin::AccessDenied - ZofCMS plugin to restrict pages based on use
         { AccessDenied => 2000 },
     ],
 
-    # this key and all of its individual argumeants are optional
+    # this key and all of its individual arguments are optional
     # ... default values are shown here
     plug_access_denied => {
         role            => sub { $_[0]->{d}{user}{role} },
@@ -112,7 +112,7 @@ restrict access to various pages. It's designed to work in conjunction
 with L<App::ZofCMS::Plugin::UserLogin> plugin; however, the use of that
 plugin is not required.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
@@ -160,7 +160,7 @@ follows:
         role => sub { $_[0]->{d}{user}{role} },
     ...
 
-B<Optional>. Takes a subref as a value. This argumeant tells the plugin
+B<Optional>. Takes a subref as a value. This argument tells the plugin
 the access roles the current user (visitor) possesses and based on these,
 the access to the page will be either granted or denied. The C<@_> will
 contain C<$t>, C<$q>, and C<$config> (in that order), where C<$t> is ZofCMS
@@ -185,7 +185,7 @@ must be separated using C<separator> (see below).
         role => sub { return [ qw/foo  bar  baz/ ] },
     ...
 
-If sub returns an arrayref, each elemeant of that arrayref will be assumed
+If sub returns an arrayref, each element of that arrayref will be assumed
 to be one role.
 
 =head4 a hashref
@@ -205,8 +205,8 @@ are the roles; plugin doesn't care about the values.
 
 B<Optional>. Takes a regex (C<qr//>) as a value. The value will be regarded
 as a separator for page's access roles (listed in C<key> key, see
-below), the value in C<role> (see above) if that argumeant is set to a
-string, as well as the value of C<master_roles> argumeant (see below).
+below), the value in C<role> (see above) if that argument is set to a
+string, as well as the value of C<master_roles> argument (see below).
 B<Defaults to:> C<qr/\s*,\s*/>
 
 =head3 C<key>
@@ -242,7 +242,7 @@ to:> C</access-denied>
 B<Optional>. Takes the string a value that contains "master" roles. If the
 user has any of the roles specified in C<master_roles>, access to the page
 will be B<granted> regardless of what the page's required roles (specified
-via C<key> argumeant) are. To disable C<master_roles>, use empty string. To
+via C<key> argument) are. To disable C<master_roles>, use empty string. To
 specify several roles, separate them with your C<separator> (see above).
 B<Defaults to:> C<admin>
 

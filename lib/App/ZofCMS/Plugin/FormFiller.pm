@@ -43,7 +43,7 @@ __END__
 
 =head1 NAME
 
-App::ZofCMS::Plugin::FormFiller - fill HTML form elemeants' values.
+App::ZofCMS::Plugin::FormFiller - fill HTML form elements' values.
 
 =head1 SYNOPSIS
 
@@ -56,10 +56,10 @@ In Main Config file or ZofCMS Template:
 
 =head1 DESCRIPTION
 
-The module provides filling of form elemeants from C<{t}> ZofCMS Template special key or query
+The module provides filling of form elements from C<{t}> ZofCMS Template special key or query
 parameters if those are specified.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
 L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE AND ZofCMS TEMPLATE FIRST-LEVEL KEYS

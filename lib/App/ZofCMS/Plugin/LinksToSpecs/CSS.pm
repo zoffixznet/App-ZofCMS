@@ -27,7 +27,7 @@ sub process {
         => q|http://www.w3.org/TR/CSS21/selector.html#first-child|,
     );
 
-    my %pseudo_elemeants = (
+    my %pseudo_elements = (
         ':before'
         => q|http://www.w3.org/TR/CSS21/selector.html#before-and-after|,
         ':after'
@@ -69,8 +69,8 @@ sub process {
         'border-width'
         => q|http://w3.org/TR/CSS21/box.html#propdef-border-width|,
 
-        'counter-incremeant'
-        => q|http://w3.org/TR/CSS21/generate.html#propdef-counter-incremeant|,
+        'counter-increment'
+        => q|http://w3.org/TR/CSS21/generate.html#propdef-counter-increment|,
 
         'max-height'
         => q|http://w3.org/TR/CSS21/visudet.html#propdef-max-height|,
@@ -93,8 +93,8 @@ sub process {
         'border-top'
         => q|http://w3.org/TR/CSS21/box.html#propdef-border-top|,
 
-        'background-attachmeant'
-        => q|http://w3.org/TR/CSS21/colors.html#propdef-background-attachmeant|,
+        'background-attachment'
+        => q|http://w3.org/TR/CSS21/colors.html#propdef-background-attachment|,
 
         'font-variant'
         => q|http://w3.org/TR/CSS21/fonts.html#propdef-font-variant|,
@@ -337,10 +337,10 @@ sub process {
         );
     }
 
-    keys %pseudo_elemeants;
-    while ( my ($name, $link ) = each %pseudo_elemeants ) {
+    keys %pseudo_elements;
+    while ( my ($name, $link ) = each %pseudo_elements ) {
         my $link_start
-        = qq|<a href="$link" title="CSS Specification: '$name\' pseudo-elemeant">|;
+        = qq|<a href="$link" title="CSS Specification: '$name\' pseudo-element">|;
 
         @{ $template->{t} }{
             "css_$name",
@@ -349,9 +349,9 @@ sub process {
             "css_${name}_cp",
         } = (
             $link_start . "<code>$name</code></a>",
-            $link_start . "<code>$name</code> pseudo-elemeant</a>",
+            $link_start . "<code>$name</code> pseudo-element</a>",
             $link_start . "$name</a>",
-            $link_start . "$name pseudo-elemeant</a>",
+            $link_start . "$name pseudo-element</a>",
         );
     }
 
@@ -433,9 +433,9 @@ everything needs to be lowercased:
     <tmpl_var name="css_PROP_cp">
     <a href="LINK" title="CSS Specification: 'PROP' property">PROP property</a>
 
-The plugin also has links for C<:after>, C<:hover>, etc. pseudo-classes and pseudo-elemeants;
+The plugin also has links for C<:after>, C<:hover>, etc. pseudo-classes and pseudo-elements;
 in this case, the rules are the same except in the output word "property" would say
-"pseudo-class" or "pseudo-elemeant".
+"pseudo-class" or "pseudo-element".
 
 =head1 SEE ALSO
 

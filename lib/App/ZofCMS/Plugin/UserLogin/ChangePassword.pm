@@ -144,7 +144,7 @@ __END__
 
 =head1 NAME
 
-App::ZofCMS::Plugin::UserLogin::ChangePassword - UserLogin plugin supplimeant for changing user passwords
+App::ZofCMS::Plugin::UserLogin::ChangePassword - UserLogin plugin suppliment for changing user passwords
 
 =head1 SYNOPSIS
 
@@ -171,9 +171,9 @@ In your HTML::Template template:
 
 The module is a plugin for L<App::ZofCMS> that provides means to display and process the
 "change password" form. This plugin was designed with an assumption that you are using
-L<App::ZofCMS::Plugin::UserLogin>, but that's not a requiremeant.
+L<App::ZofCMS::Plugin::UserLogin>, but that's not a requirement.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
 
@@ -204,7 +204,7 @@ include UserLogin plugin with lower priority sequence to execute earlier.
             . q| value="Change password">|,
     },
 
-    # or set argumeants via a subref
+    # or set arguments via a subref
     plug_user_login_change_password => sub {
         my ( $t, $q, $config ) = @_;
         return {
@@ -218,7 +218,7 @@ there. If sub returns
 an C<undef>, then plugin will stop further processing. The C<@_> of the subref will
 contain (in that order): ZofCMS Tempalate hashref, query parameters hashref and
 L<App::ZofCMS::Config> object. To run with all the defaults (which won't be the case for
-nearly everything but testing environmeant) set to empty hashref.
+nearly everything but testing environment) set to empty hashref.
 Possible keys/values for the hashref are as follows:
 
 =head3 C<dsn>
@@ -232,7 +232,7 @@ See L<App::ZofCMS::Plugin::UserLogin> for more details; this one needs
 to point to the
 same database that UserLogin plugin uses so the right password could be changed.
 B<Defaults to:> C<DBI:mysql:database=test;host=localhost>  (as I've said, useful only for
-testing enviromeant)
+testing enviroment)
 
 =head3 C<user>
 
@@ -257,7 +257,7 @@ B<Optional>. Specifies the password for database access. B<Defaults to:> C<test>
     },
 
 B<Optional>. Specifies additional L<DBI> options. See L<App::ZofCMS::Plugin::UserLogin>'s
-C<opt> argumeant for more details. B<Defaults to:> C<< { RaiseError => 1, AutoCommit => 1 } >>
+C<opt> argument for more details. B<Defaults to:> C<< { RaiseError => 1, AutoCommit => 1 } >>
 
 =head3 C<table>
 
@@ -323,7 +323,7 @@ C<< <input type="submit" class="input_submit"  name="plug_user_login_change_pass
 =head1 PLUGIN'S HTML AND OUTPUT
 
 The plugin uses key in C<{t}> special key that is specified via C<key> plugin's configuration
-argumeant (defaults to C<change_pass_form>). That key will contain either the HTML
+argument (defaults to C<change_pass_form>). That key will contain either the HTML
 form for password changing or the message that password was successfully changed.
 
 If an error occured (such as mismatching passwords), plugin will set

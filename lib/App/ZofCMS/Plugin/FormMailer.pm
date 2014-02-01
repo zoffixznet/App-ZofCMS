@@ -119,7 +119,7 @@ In your L<HTML::Template> file:
 The module is a plugin for L<App::ZofCMS> that
 provides means to easily e-mail query parameters.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
 L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE AND ZofCMS TEMPLATE FIRST-LEVEL KEYS
@@ -186,7 +186,7 @@ their values from ZofCMS Template. Possible keys/values are as follows:
 B<Mandatory>. The C<format> key takes a scalar or a scalarref as a value.
 When the value is a B<scalarref> then it is interpreted as a file name relative to the
 "templates" dir; this file will be read and its contents will serve as a value for C<format>
-argumeant (i.e. same as specifying contents of the file to C<format> as scalar value).
+argument (i.e. same as specifying contents of the file to C<format> as scalar value).
 If an error occured when opening the file, the plugin will set the C<plug_form_mailer_error>
 in the C<{t}> special key to the error message and will set the C<format> to an empty string.
 
@@ -204,7 +204,7 @@ be replaced with current time and user's host respectively.
 
 B<Mandatory>. Specifies the e-mail address(es) to which to send the e-mails. Takes either
 an arrayref or a scalar as a value. Specifying a scalar is the same as specifying
-an arrayref with just that scalar in it. Each elemeant of that arrayref must be a valid
+an arrayref with just that scalar in it. Each element of that arrayref must be a valid
 e-mail address.
 
 =head3 C<from>
@@ -221,7 +221,7 @@ specified, thus the "From" will be whatever your server has in stock.
     trigger => [ qw/ d   plug_form_checker_ok / ],
 
 B<Optional>. The plugin will not do anything until its "trigger" is set to a true value.
-The C<trigger> argumeant takes an arrayref as a value. Each element of this arrayref represent
+The C<trigger> argument takes an arrayref as a value. Each element of this arrayref represent
 a B<hashref> key in which to find the trigger. In other words, if C<trigger> is set to
 C<[ qw/ d   plug_form_checker_ok / ]> then the plugin will check if the C<plug_form_checker_ok>
 key I<inside> C<{d}> ZofCMS Template special key is set to a true value. You can nest as

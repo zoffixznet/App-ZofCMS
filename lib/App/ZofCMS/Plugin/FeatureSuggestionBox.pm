@@ -273,7 +273,7 @@ The module is a plugin for L<App::ZofCMS> that gives you a "feature
 suggestion box". It is a form where a user can type up a suggestion
 and, once submitted, that suggestion will arrive in your email inbox.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>.
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>.
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
 
@@ -386,7 +386,7 @@ B<Defaults to:> C<1> (name/email are disabled)
 
 B<Optional>. Takes a scalar as a value that specifies the C<From> field for
 the email. If not specified, the plugin will simply not set the C<From>
-argumeant in L<MIME::Lite>'s C<new()> method (which is what this plugin uses
+argument in L<MIME::Lite>'s C<new()> method (which is what this plugin uses
 under the hood). See L<MIME::Lite>'s docs for more description.
 B<Defaults to:> C<undef> (not specified)
 
@@ -401,8 +401,8 @@ B<Defaults to:> C<undef> (not specified)
     ...
 
 B<Optional>. Takes a subref or a scalar as a value. The value of this
-argumeant will be present in the email indicating submitter's name.
-Applies regardless of C<no_identification> argumeant's value. If specified,
+argument will be present in the email indicating submitter's name.
+Applies regardless of C<no_identification> argument's value. If specified,
 the value will override whatever the user enters in the C<Your name>
 field.
 
@@ -424,8 +424,8 @@ B<Defaults to:> C<< sub { $_[0]->{d}{user}{name} } >>
     ...
 
 B<Optional>. Takes a subref or a scalar as a value. The value of this
-argumeant will be present in the email indicating submitter's email address.
-Applies regardless of C<no_identification> argumeant's value. If specified,
+argument will be present in the email indicating submitter's email address.
+Applies regardless of C<no_identification> argument's value. If specified,
 the value will override whatever the user enters in the C<Your email>
 field.
 
@@ -461,7 +461,7 @@ subject of the email. B<Defaults to:> C<Feature Suggestion>
 
 B<Optional>. Takes an arrayref as a value.
 If specified, the arrayref will be directly dereferenced into
-C<< MIME::Lite->send() >>. Here you can set any special send argumeants you
+C<< MIME::Lite->send() >>. Here you can set any special send arguments you
 need; see L<MIME::Lite> docs for more info. B<Note:> if the plugin refuses
 to send email, it could well be that you need to set some
 C<mime_lite_params>; on my box, without anything set, the plugin behaves
@@ -507,7 +507,7 @@ This will be set to true if the form has been successfully submitted.
 
 =head1 EMAIL TEMPLATE
 
-If C<email_template> argumeant is not specified, the plugin will use its
+If C<email_template> argument is not specified, the plugin will use its
 default email template shown here:
 
     <h1>Feature Suggestion</h1>
@@ -535,7 +535,7 @@ The L<HTML::Template> template variables available here as as follows:
 
     From: <tmpl_var escape='html' name='name'>
 
-If C<user_name> argumeant is specified, this variable will contain its value.
+If C<user_name> argument is specified, this variable will contain its value.
 Otherwise, it will either contain what the user specifies in the
 C<Your name> field in the form, or won't be set at all.
 
@@ -543,7 +543,7 @@ C<Your name> field in the form, or won't be set at all.
 
     Email: <tmpl_var escape='html' name='email'>
 
-If C<user_email> argumeant is specified, this variable will contain its
+If C<user_email> argument is specified, this variable will contain its
 value. Otherwise, it will either contain what the user specifies in the
 C<Your email> field in the form, or won't be set at all.
 
@@ -553,7 +553,7 @@ C<Your email> field in the form, or won't be set at all.
 
 This variable will contain what the user types in the C<Suggestion> box
 in the form. B<Note:> HTML entities will be escaped here and new
-lines replaced with C<< <br> >> elemeants; thus, do not use C<escape="html">
+lines replaced with C<< <br> >> elements; thus, do not use C<escape="html">
 C<< <tmpl_var> >> attribute here.
 
 =head2 C<< <tmpl_if name='has_name'> >>
@@ -562,7 +562,7 @@ C<< <tmpl_var> >> attribute here.
         I HAS NAME!!!
     </tmpl_if>
 
-Set to a true value if either C<user_name> argumeant is set to something,
+Set to a true value if either C<user_name> argument is set to something,
 or the user fills the C<Your name> field in the form.
 
 =head2 C<< <tmpl_if name='has_email'> >>
@@ -571,17 +571,17 @@ or the user fills the C<Your name> field in the form.
         I HAS EMAIL!!!
     </tmpl_if>
 
-Set to a true value if either C<user_email> argumeant is set to something,
+Set to a true value if either C<user_email> argument is set to something,
 or the user fills the C<Your emails> field in the form.
 
 =head1 GENERATED FORM
 
 Examples below show the form with three fields. If C<no_identitification>
-argumeant is set to a true value, the C<Your name> and C<Your email>
-fields (altogether with C<< <li> >> elemeants that contain them) won't be
+argument is set to a true value, the C<Your name> and C<Your email>
+fields (altogether with C<< <li> >> elements that contain them) won't be
 present.
 
-The C<page> hidden C<< <input> >> elemeant's value is obtained by the plugin
+The C<page> hidden C<< <input> >> element's value is obtained by the plugin
 automatically.
 
 =head2 Default view

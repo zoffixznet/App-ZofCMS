@@ -516,17 +516,17 @@ The module is a plugin for L<App::ZofCMS>. It provides means to easily add
 "visitor comments" to your pages. The plugin offers configurable
 flood protection ( $x comments per $y seconds ) as well as ability to
 notify you of new comments via e-mail. The "moderation" function is also
-implemeanted, what that means is that you (the admin) would get two links
+implemented, what that means is that you (the admin) would get two links
 (via e-mail) following one of them will approve the comment; following the
 other will simply delete the comment from the database.
 
 I am an utterly lazy person, thus you may find that not everything you
 may want to configure in the plugin is configurable. The plugin is
-yet to undergo (at the time of this writing) deploymeant testing, as in
+yet to undergo (at the time of this writing) deployment testing, as in
 how flexible it is. If you'd like to see some features added, don't be shy
 to drop me a line to C<zoffix@cpan.org>
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 HOW IT ALL COMES TOGETHER OR "WHAT'S THAT 'comments' PAGE ANYWAY?"
@@ -589,7 +589,7 @@ happens is that the comment is first placed in the "moderation table". If
 you click "approve", the comment is moved into the "comments table". If
 the comment is denied by you, it is simply deleted from the
 "moderation table". There is a feature that allows all comments that
-are older than $x seconds (see C<mod_out_time> argumeant) to be deleted
+are older than $x seconds (see C<mod_out_time> argument) to be deleted
 from the "moderation table" automatically.
 
 =head1 WHAT? NO CAPTCHA?
@@ -601,7 +601,7 @@ hate. I think the worst captcha I ever came across was this:
 L<http://www.zoffix.com/new/captcha-wtf.png>. But most of all, I think
 they are plain annoying.
 
-In this plugin I implemeanted a non-annoying "captcha" mechanizm suggested
+In this plugin I implemented a non-annoying "captcha" mechanizm suggested
 by one of the people I know who claimed it works very well. At the time
 of this writing I am not yet aware of how "well" it really is. Basically,
 the plugin sticks C<< <input type="hidden" name="zofcms_comments_username" value="your user name"> >> in the form. When checking the parameters,
@@ -665,13 +665,13 @@ neither the ZofCMS template nor the main config file).
 
 Whoosh, now that's a list of options! Luckly, most of them have defaults.
 I'll go over them in a second. Just want to point out that all these
-argumeants can be set in the "main config file" same way you'd set them
+arguments can be set in the "main config file" same way you'd set them
 in ZofCMS template (the first-level C<comments_plugin> key). In fact,
 I recommend you set them all in ZofCMS main config file instead of ZofCMS
 templates, primarily because you'd
 want to have it duplicated at least twice: once on the "comments page"
 and once on the page on which you actually want to have visitors' comments
-functionality. So here are the possible argumeants:
+functionality. So here are the possible arguments:
 
 =head3 C<dsn>
 
@@ -698,7 +698,7 @@ specified in the C<email_to> arrayref.
 
 B<Optional>. This is the "comments page" that I explained in the
 C<HOW IT ALL COMES TOGETHER OR "WHAT'S THAT 'comments' PAGE ANYWAY?">
-section above. Argumeant takes a string as a value. That value is what
+section above. Argument takes a string as a value. That value is what
 you'd set the C<page> query parameter in order to get to the "comments
 page". B<Make sure> you also prepend the C<dir>. In the example above
 the comments page is accessed via
@@ -725,28 +725,28 @@ SQL database used by the plugin. B<By default> is not specified.
 
 B<Optional>. Takes a hashref as a value.
 Specifies additional options to L<DBI>'s C<connect_cached()>
-method, see L<DBI>'s documeantation for possible keys/values of this
+method, see L<DBI>'s documentation for possible keys/values of this
 hashref. B<Defaults to:> C<< { RaiseError => 1, AutoCommit => 1 } >>
 
 =head3 C<uri>
 
     uri => 'http://yoursite.com/index.pl?page=/comments',
 
-B<Optional>. The only place in which this argumeant is used is for
+B<Optional>. The only place in which this argument is used is for
 generating the "Approve" and "Deny" URIs in the e-mail sent to you when
 C<moderate> is set to a true value. Basically, here you would give
 the plugin a URI to your "comments page" (see C<page> argument above).
-If you don't specify this argumeant, nothing will explode (hopefully) but
+If you don't specify this argument, nothing will explode (hopefully) but
 you won't be able to "click" the "Approve"/"Deny" URIs.
 
 =head3 C<mailer>
 
     mailer => 'testfile',
 
-B<Optional>. When either C<moderate> or C<send_entered> argumeants are
-set to true values, the C<mailer> argumeant specifies which "mailer" to
-use to send e-mails. See documeantation for L<Mail::Mailer> for possible
-mailers. B<By default> C<mailer> argumeant is not specified, thus the
+B<Optional>. When either C<moderate> or C<send_entered> arguments are
+set to true values, the C<mailer> argument specifies which "mailer" to
+use to send e-mails. See documentation for L<Mail::Mailer> for possible
+mailers. B<By default> C<mailer> argument is not specified, thus the
 "mailers" will be tried until one of them works. When C<mailer> is set
 to C<testfile>, the mail file will be located at the same place ZofCMS'
 C<index.pl> file is located.
@@ -755,10 +755,10 @@ C<index.pl> file is located.
 
     no_pages => [ qw(/foo /bar/beer /baz/beer/meer) ],
 
-B<Optional>. Takes an arrayref as a value. Each elemeant of that arrayref
+B<Optional>. Takes an arrayref as a value. Each element of that arrayref
 B<must> be a C<page> with C<dir> appended to it, even if C<dir> is C</>
 (see the "Note on page and dir query parameters" in L<App::ZofCMS::Config>
-documeantation). Basically, any pages listed here will not be processed
+documentation). Basically, any pages listed here will not be processed
 by the plugin even if the plugin is listed in C<plugins> first-level
 ZofCMS template key. B<By default> is not set.
 
@@ -784,7 +784,7 @@ above for details. B<Defaults to:> C<comments>
 
     mod_table => 'mod_comments',
 
-B<Optional>. Same as C<table> argumeant (see above) except this one
+B<Optional>. Same as C<table> argument (see above) except this one
 specifies the name of "moderation table", i.e. the comments awaiting
 moderation will be stored in this SQL table. B<Defaults to:>
 C<mod_comments>
@@ -811,9 +811,9 @@ a true value.
     email_max   => 200,
     comment_max => 10000,
 
-B<Optional>. Same principle as with C<must_*> argumeants explained above,
-except C<*_max> argumeants specify the maximum length of the fields. If
-visitor enters more than specified by the corresponding C<*_max> argumeant,
+B<Optional>. Same principle as with C<must_*> arguments explained above,
+except C<*_max> arguments specify the maximum length of the fields. If
+visitor enters more than specified by the corresponding C<*_max> argument,
 he or she (hopefully no *it*s) will get an error. B<By default>
 C<name_max> is set to C<100>, C<email_max> is set to C<200> and
 C<comment_max> is set to C<10000>.
@@ -834,9 +834,9 @@ automatically sent to C<email_to> addresses. B<Defaults to:> C<1>
     send_entered => 1,
 
 B<Optional>. Takes either true or false values, regarded only when
-C<moderate> argumeant is set to a false value. When set to a true value
+C<moderate> argument is set to a false value. When set to a true value
 will dispatch an e-mail about a new comment to the addresses set
-in C<email_to> argumeant. B<Defaults to:> C<1>
+in C<email_to> argument. B<Defaults to:> C<1>
 
 =head3 C<subject>
 
@@ -844,7 +844,7 @@ in C<email_to> argumeant. B<Defaults to:> C<1>
 
 B<Optional>. Takes a string as a value. Nothing fancy, this will be
 the "Subject" of the e-mails sent by the plugin (see C<moderate> and
-C<send_entered> argumeants). B<Defaults to:> C<'ZofCMS Comments'>
+C<send_entered> arguments). B<Defaults to:> C<'ZofCMS Comments'>
 
 =head3 C<flood_num>
 

@@ -42,7 +42,7 @@ sub _do {
             and defined $conf->{login};
 
     @{ $conf->{pages} } % 2
-        and die '`pages` must contain even number of elemeants';
+        and die '`pages` must contain even number of elements';
 
     $self->{CONF}   = $conf;
     $self->{Q}      = $q;
@@ -270,7 +270,7 @@ redirect (selection is stored in a SQL database). The module was
 designed to provide means to let the users select their landing pages
 upon logon, which is how the name of the module originated.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>.
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
@@ -346,7 +346,7 @@ If C<pages> is not specified, or its arrayref is empty, or if the subref
 returns C<undef>, empty arrayref or empty list, plugin will stop further
 execution.
 
-The arrayref must have an even number of elemeants that are to be thought
+The arrayref must have an even number of elements that are to be thought
 of as keys and values (the arrayref is used to preserve order). The "keys"
 of the arrayref represent URIs to which to redirect the user and
 the "values" must be strings that represent the human readable description
@@ -361,7 +361,7 @@ as what you specify here, in C<pages>.
     ...
 
 B<Optional, but with a useless default>. The C<dsn> key will be passed
-to L<DBI>'s C<connect_cached()> method, see documeantation for L<DBI> and
+to L<DBI>'s C<connect_cached()> method, see documentation for L<DBI> and
 C<DBD::your_database> for the correct syntax for this one. The example
 above uses MySQL database called C<test> which is located
 on C<localhost>. B<Defaults to:>
@@ -488,7 +488,7 @@ B<Defaults to:> C<< sub { $_[0]->{d}{user}{login} } >>
     ...
 
 B<Optional>. Takes a string as a value. Specifies the text for the
-C<< <label> >> elemeant in the start page selection form.
+C<< <label> >> element in the start page selection form.
 B<Defaults to:> C<Start page:>
 
 =head3 C<default_page>
@@ -523,7 +523,7 @@ C<< <input type="submit" class="input_submit" value="Save"> >>
 
 =head1 HTML::Template VARIABLES
 
-If C<no_redirect> argumeant (see above) is set to a true value, the
+If C<no_redirect> argument (see above) is set to a true value, the
 plugin will stick C<plug_start_page_form> variable into C<{t}>
 ZofCMS Template special key. It will contain the start page selecting
 form in it.
@@ -555,8 +555,8 @@ Here's what plugin generated start page selecting form looks like:
 
 The value for C<page> hidden C<< <input> >> is derived by the plugin
 automagically. The C<< <p class="success-message">Successfully saved</p>
->> elemeant is shown only when the user saves their settings. The text
-for the C<< <label> >> is controlled by the C<label_text> argumeant,
+>> element is shown only when the user saves their settings. The text
+for the C<< <label> >> is controlled by the C<label_text> argument,
 and the HTML code of the submit button is controlled by
 C<submit_button>.
 

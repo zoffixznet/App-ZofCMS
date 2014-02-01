@@ -337,7 +337,7 @@ sub _create_CU_form {
         id          => $self->{Q}{crud_id},
         page        => $self->{Q}{dir} . $self->{Q}{page},
         has_files   => scalar( grep $_->{el_file}, @items ),
-        elemeants    => [ grep !$_->{el_auto_set}, @items ],
+        elements    => [ grep !$_->{el_auto_set}, @items ],
         create_success  => $self->{CREATE_SUCCESS},
         update_success  => $self->{UPDATE_SUCCESS},
         hide_form       => ($self->{CREATE_SUCCESS} || $self->{UPDATE_SUCCESS}),
@@ -457,7 +457,7 @@ sub _get_CU_form_template {
         <p class="crud_form_note">Fields marked with
             an asterisk(*) are mandatory.</p>
         <ul>
-            <tmpl_loop name='elemeants'>
+            <tmpl_loop name='elements'>
             <li>
                 <tmpl_if name='el_text'>
                     <label for="<tmpl_var escape='html' name='id'>">
@@ -590,7 +590,7 @@ In your HTML::Template Template:
 =head1 DESCRIPTION
 
 The plugin provides a generic "Create Read Update Delete List" functionality.
-(Currently, READ is not implemeanted). In conjunction with this plugin,
+(Currently, READ is not implemented). In conjunction with this plugin,
 you might find these plugins useful L<App::ZofCMS::Plugin::DBIPPT>
 and L<App::ZofCMS::Plugin::FormChecker>.
 
@@ -708,7 +708,7 @@ The items in a list can be of these types:
 
 A simple string will be represented as a C<< <input type="text"> >>
 in the Create/Update HTML form. The string will become the
-C<< <label> >> text for the form elemeant. Then everything in it that doesn't
+C<< <label> >> text for the form element. Then everything in it that doesn't
 match C<\w> will be converted into underscores, and C<lc()> will be run,
 and that new string will be used for:
 
@@ -802,7 +802,7 @@ B<The value> of the hashref can be a string, an arrayref, or a subref:
         { File => 'file' },
     ],
 
-When the value is a string, it will specify the type of HTML elemeant to
+When the value is a string, it will specify the type of HTML element to
 use for this record item in the Create/Update form. B<Currently supported
 values> are C<text> for C<< <input type="text"> >>, C<textarea> for
 C<< <textarea> >>, and C<file> for C<< <input type="file"> >>.
@@ -814,7 +814,7 @@ File inputs are currently not editable in the Update form.
         { Description => [ 'textarea', optional => 1 ] },
     ]
 
-The first item in the arrayref will be the type of HTML elemeant to
+The first item in the arrayref will be the type of HTML element to
 use for this record item (see C<A string> section right above). The
 rest of the items are in key/value pairs and specify options for this
 record. The currently available option is C<optional> that, when set to
@@ -997,7 +997,7 @@ permissions (see C<can> configuration variable).
 Contains true or false values. If true, it means the plugin retrieved
 at least one record with the List operation. This variable will always be
 false if the user isn't allowed to I<List> (see C<can> configuration
-argumeant).
+argument).
 
 =head2 C<crud_items>
 
@@ -1017,9 +1017,9 @@ argumeant).
 
 A loop containing records returned by the List operation. This variable
 will be empty if the user isn't allowed to I<List> (see C<can> configuration
-argumeant). The variables in the loop are as follows:
+argument). The variables in the loop are as follows:
 
-=head3 All items from C<items> configuration argumeant
+=head3 All items from C<items> configuration argument
 
     <a href="<tmpl_var escape='html' name='file'>"
         ><tmpl_var escape='html' name='item'></a></td>
@@ -1028,11 +1028,11 @@ argumeant). The variables in the loop are as follows:
     <td><tmpl_var name='foo2'></td>
     <td><tmpl_var escape='html' name='time'></td>
 
-All the items you specified in the C<items> configuration argumeant will be
+All the items you specified in the C<items> configuration argument will be
 present here, even if that item was set as a subref in the C<items>.
 You can also add extra keys here through C<list_sub> sub specified in the
 configuration. B<Note:> any C<file> items will contain filename
-I<and> directory specified in the C<file_dir> argumeant. You can modify that
+I<and> directory specified in the C<file_dir> argument. You can modify that
 using C<list_sub> sub.
 
 =head3 C<crud_can_d>
@@ -1042,7 +1042,7 @@ using C<list_sub> sub.
     </tmpl_if>
 
 True or false value. If true, then the user is allowed to delete
-records (see C<can> configuration argumeant).
+records (see C<can> configuration argument).
 
 =head3 C<crud_can_u>
 
@@ -1051,7 +1051,7 @@ records (see C<can> configuration argumeant).
     </tmpl_if>
 
 True or false value. If true, then the user is allowed to update
-records (see C<can> configuration argumeant).
+records (see C<can> configuration argument).
 
 =head3 C<crud_can_ud>
 
@@ -1060,7 +1060,7 @@ records (see C<can> configuration argumeant).
     </tmpl_if>
 
 True or false value. If true, then the user is allowed to delete
-B<or> update records (see C<can> configuration argumeant).
+B<or> update records (see C<can> configuration argument).
 
 =head3 C<crud_u_form>
 
@@ -1086,7 +1086,7 @@ C<< <tmpl_var name='crud_id> >>).
 
 =head1 TODO AND LIMITATIONS
 
-Currently, the module doesn't actually implemeant the "READ" functionality.
+Currently, the module doesn't actually implement the "READ" functionality.
 Instead, it only does "LIST" (i.e. list all records instead of a chosen
 one) and it doesn't support pagination. If you expect a whole ton of
 records in the database, heed the "L" flag in the C<can> option; if it's

@@ -142,7 +142,7 @@ App::ZofCMS::Plugin::HTMLMailer - ZofCMS plugin for sending HTML email
             Type     => 'image/gif',
             Path     => 'aaa000123.gif',
             Filename => 'logo.gif',
-            Disposition => 'attachmeant'
+            Disposition => 'attachment'
         ],
     },
 
@@ -152,7 +152,7 @@ The module is a ZofCMS plugin that provides means to easily create an
 email from an L<HTML::Template> template, fill it, and email it as an HTML
 email.
 
-This documeantation assumes you've read
+This documentation assumes you've read
 L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE KEYS
@@ -318,7 +318,7 @@ you specify here.
 
 B<Optional>. Specifies key/value parameters for L<HTML::Template>'s
 C<param()> method; this will be called on the L<HTML::Template> template
-of your email body (specified by C<template> argumeant).
+of your email body (specified by C<template> argument).
 Takes an arrayref or a subref as a value. If subref is
 specified, its C<@_> will contain C<$t>, C<$q>, and C<$config> (in that
 order), where C<$t> is ZofCMS Template hashref, C<$q> is query parameter
@@ -344,7 +344,7 @@ of your email. B<Default:> empty string.
 
 B<Optional>. Takes a scalar as a value that specifies the C<From> field
 for your email. If not specified, the plugin will simply not set the
-C<From> argumeant in L<MIME::Lite>'s C<new()> method (which is what
+C<From> argument in L<MIME::Lite>'s C<new()> method (which is what
 this plugin uses under the hood). See L<MIME::Lite>'s docs for more
 description. B<By default> is not specified.
 
@@ -358,7 +358,7 @@ B<Optional>. Takes a scalar as a value. If specified, takes either an
 absolute or relative path to the directory that contains all your
 L<HTML::Template> email templates (see C<template> above for more info). If
 relative path is specified, it will be relative to the C<index.pl> file.
-The purpose of this argumeant is to simply have a shortcut to save you the
+The purpose of this argument is to simply have a shortcut to save you the
 trouble of specifying the directory every time you use C<template>.
 B<By default> is not specified.
 
@@ -378,9 +378,9 @@ order), where C<$t> is ZofCMS Template hashref, C<$q> is query parameters
 hashref, C<$config> is L<App::ZofCMS::Config> object, and C<$plug_conf>
 is the configuration hashref of this plugin (that is the
 C<plug_htmlmailer> hashref). You can use C<$plug_conf> to stick modified
-configuration argumeants to the I<current run> of this plugin (modifications
+configuration arguments to the I<current run> of this plugin (modifications
 will not be saved past current run stage). The subref will be executed
-B<after> the C<to> argumeant is processed, but before anything else is
+B<after> the C<to> argument is processed, but before anything else is
 done. B<Note:> if C<to> is not set (or set to subref that returns undef)
 then the C<precode> subref will B<NOT> be executed at all. B<By default>
 is not specified.
@@ -397,7 +397,7 @@ is not specified.
 
 B<Optional>. Takes an arrayref as a value. If specified, the arrayref
 will be directly dereferenced into C<< MIME::Lite->send() >>. Here you
-can set any special send argumeants you need; see L<MIME::Lite> docs for
+can set any special send arguments you need; see L<MIME::Lite> docs for
 more info. B<By default> is not specified.
 
 =head3 C<html_template_object>
@@ -410,10 +410,10 @@ more info. B<By default> is not specified.
     ...
 
 B<Optional>. Takes an L<HTML::Template> object (or something that behaves
-like one). If specified, the C<template> and C<template_dir> argumeants
+like one). If specified, the C<template> and C<template_dir> arguments
 will be ignored and the object you specify will be used instead. B<Note:>
 the default L<HTML::Template> object (used when C<html_template_object>
-is B<not> specified) has C<die_on_bad_params> argumeant set to a false
+is B<not> specified) has C<die_on_bad_params> argument set to a false
 value; using C<html_template_object> you can change that.
 B<By default> is not specified.
 
@@ -424,7 +424,7 @@ B<By default> is not specified.
             Type     => 'image/gif',
             Path     => 'aaa000123.gif',
             Filename => 'logo.gif',
-            Disposition => 'attachmeant'
+            Disposition => 'attachment'
         ],
     ...
 
@@ -434,7 +434,7 @@ B<By default> is not specified.
                 Type     => 'image/gif',
                 Path     => 'aaa000123.gif',
                 Filename => 'logo1.gif',
-                Disposition => 'attachmeant'
+                Disposition => 'attachment'
             ],
             [
                 Type     => 'TEXT',
@@ -458,7 +458,7 @@ gives you an ability to attach files to your emails.
 Takes an arrayref, an arrayref of arrayrefs, or a subref as a value. If an arrayref is
 specified, plugin will create a single-item arrayref with it (so it'll be nested); if an
 arrayref of arrayrefs is specified, each of its arrayrefs will be interpreted as a
-list of argumeants to pass to C<attach> method. If a subref is specified, its return
+list of arguments to pass to C<attach> method. If a subref is specified, its return
 value will be assigned to the C<attach> key and its C<@_> array will contain:
 C<$t>, C<$q>, C<$config> (in that order) where C<$t> is ZofCMS Template
 hashref, C<$q> is the query parameter hashref and C<$config> is the

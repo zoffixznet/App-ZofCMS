@@ -44,7 +44,7 @@ In HTML::Template file:
 The module is a plugin for L<App::ZofCMS> that provides means to fetch a random
 quote from L<http://bash.org/>.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
 L<App::ZofCMS::Template>
 
 =head1 TO RUN THE PLUGIN

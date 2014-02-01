@@ -106,8 +106,8 @@ for usage. That would be in one of your t/test.t files.
         { foo => 'bar'   }, # the loaded "main config" file hashref
     );
 
-Takes three argumeants, second, third and fourth are optional.
-First argumeant is the name
+Takes three arguments, second, third and fourth are optional.
+First argument is the name
 of your plugin with the C<App::ZofCMS::Plugin::> part stripped off (i.e.
 the name that you would use in ZofCMS template to include the plugin).
 Second parameter is optional, it must be a hashref which would represent

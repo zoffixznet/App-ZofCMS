@@ -108,7 +108,7 @@ writing, I have about 14 sites that have been using this plugin for
 3+ years and I might have received one spam email to the email address
 shown by the plugin. Anyway, on to the business.
 
-This documeantation assumes you have read L<App::ZofCMS>,
+This documentation assumes you have read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG/ZofCMS TEMPLATE FIRST-LEVEL KEYS
@@ -130,7 +130,7 @@ value. If the key is specified in both main config file and ZofCMS template B<an
 is of the same type (string, arrayref or hashref) then both values will be interpreted by
 the plugin; in case of the hashref, any duplicate keys will obtain the value assigned to
 them in ZofCMS template. B<Note:> if the value is of "type" C<string> specified in B<both>
-main config file and ZofCMS template it will interpreted as an arrayref with two elemeants.
+main config file and ZofCMS template it will interpreted as an arrayref with two elements.
 Now I'll tell you why this all matters:
 
 =head3 value is a string
@@ -145,7 +145,7 @@ data via variable C<mailto>, i.e. C<< <tmpl_var name="mailto"> >>
     plug_anti_spam_mailto => [ qw/foo bar baz/ ],
 
 To access converted data when the value is an arrayref you'd use C<mailto_NUM> where C<NUM>
-is the index of the elemeant in the arrayref. In other words, to access value C<bar> in the
+is the index of the element in the arrayref. In other words, to access value C<bar> in the
 example above you'd use C<< <tmpl_var name="mailto_1"> >>
 
 =head3 value is a hashref

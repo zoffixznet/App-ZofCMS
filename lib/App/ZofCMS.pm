@@ -16,13 +16,13 @@ App::ZofCMS - web framework and templating system for small-medium sites.
 
 =head1 SYNOPSIS
 
-This module is just the main documeantation for ZofCMS framework. See
+This module is just the main documentation for ZofCMS framework. See
 L<USING THE FRAMEWORK> section below for explanation of how to use this
 framework.
 
 =head1 DESCRIPTION
 
-ZofCMS stands for "Zoffix's Content Managemeant System", however I prefer
+ZofCMS stands for "Zoffix's Content Management System", however I prefer
 it to be just a name. It is a small web framework/templating system designed
 to be easily installed and workable on limited severs, i.e. the ones that do
 not allow you to install perl modules from CPAN, don't have ssh and
@@ -63,7 +63,7 @@ to make all those products displayed with only one L<HTML::Template>
 template proved to be flexible, extendable and maintainable and that's
 exactly from where ZofCMS template format came.
 
-The last site I coded before starting to implemeant ZofCMS was a private
+The last site I coded before starting to implement ZofCMS was a private
 web application which had a message board along with a few other features.
 Mostly everything was coded from scratch once more... The final breaking
 point when a few weeks later I was asked to add two sections for file
@@ -122,7 +122,7 @@ in the templates and display the page to the user.
 =head2 FIRST TIME USE
 
 Ok, if you are reading this I can assume you want to give ZofCMS a whirl.
-This documeantation describes how to install/use it from CPAN. I am also
+This documentation describes how to install/use it from CPAN. I am also
 planing to put up a ZofCMS tarball on L<http://web-tools.cc/tools/ZofCMS/>
 from which you can get started without touching CPAN (for the most part).
 At the time of this writing that webpage is not yet up.
@@ -136,7 +136,7 @@ script can be found by running C<perldoc zofcms_helper>.
 =head2 INITIAL SETUP
 
 Pick a directory in which you want to create ZofCMS "base" from which
-you would start working on your site. This documeantation assumes that you
+you would start working on your site. This documentation assumes that you
 are doing all this on a local, fully functional box.
 
 ZofCMS directory/file setup is arranged to have one directory web
@@ -181,10 +181,10 @@ is the "base" L<HTML::Template> file, it will be filled with virtually
 all the keys from ZofCMS template. In the C<templates> directory you will
 find C<index.tmpl> and C<404.tmpl>
 
-B<Before we proceed any further> I advise you to read documeantation
+B<Before we proceed any further> I advise you to read documentation
 for L<App::ZofCMS::Config> and L<App::ZofCMS::Template> as I am not going
-to explain what each key means; it is explained in aforemeantioned
-documeantation in detail.
+to explain what each key means; it is explained in aforementioned
+documentation in detail.
 
 =head2 FIRST PAGE
 
@@ -192,7 +192,7 @@ Now, let's create our first page. Let it be named something original,
 like "foo" :)
 
 Open up your config file and under valid pages add '/foo'. Considering
-you *did* read documeantation for L<App::ZofCMS::Config> you'll know exactly
+you *did* read documentation for L<App::ZofCMS::Config> you'll know exactly
 what to do at this point.
 
 now go to your "core dir" (which will be /var/www/testsite/web_site/

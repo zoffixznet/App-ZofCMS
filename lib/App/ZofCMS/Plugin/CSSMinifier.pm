@@ -63,13 +63,13 @@ In your ZofCMS Template or Main Config File:
         file => 'main.css',
     },
 
-Now, this page can be linked into your documeant as a CSS file (it will be minified)
+Now, this page can be linked into your document as a CSS file (it will be minified)
 
 =head1 DESCRIPTION
 
 The module is a plugin for L<App::ZofCMS> that provides means to send minified CSS files.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 WTF IS MINIFIED?
 
@@ -117,7 +117,7 @@ take precedence. The following keys/values are accepted:
         file        => 'main.css',
     }
 
-B<Mandatory>. Takes a string as an argumeant that specifies the name of the CSS file to
+B<Mandatory>. Takes a string as an argument that specifies the name of the CSS file to
 minify. The filename is relative to C<index.pl> file.
 
 =head3 C<cache>
@@ -129,7 +129,7 @@ minify. The filename is relative to C<index.pl> file.
 
 B<Optional>. Takes either true or false values. When set to a true value the plugin will
 send out an HTTP C<Expires> header that will say that this content expries in like 2038, thus
-B<set this option to a false value while still developing your CSS>. This argumeant
+B<set this option to a false value while still developing your CSS>. This argument
 has no effect when C<auto_output> (see below) is turned off (set to a false value).
 B<Defaults to:> C<1>
 
@@ -142,7 +142,7 @@ B<Defaults to:> C<1>
 
 B<Optional>. Takes either true or false values. When set to a true value, plugin will
 automatically send C<text/css> C<Content-type> header (along with C<Expires> header if
-C<cache> argumeant is set to a true value), output the minified CSS file B<and exit()>.
+C<cache> argument is set to a true value), output the minified CSS file B<and exit()>.
 Otherwise, the minified CSS file will be put into C<< $t->{t}{plug_css_minifier} >>
 where C<$t> is ZofCMS Template hashref and you can do whatever you want with it.
 B<Defaults to:> C<1>

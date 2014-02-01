@@ -83,7 +83,7 @@ Using this plugin you can dynamically (and more "on demand") stuff keys from Mai
 to ZofCMS Template hashref without messing around with other plugins and poking with
 ->conf method
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 Main Config File and ZofCMS Template First Level Keys
 
@@ -161,7 +161,7 @@ data. Note that C<config_cell> must point to a hashref. B<Defaults to:> C<public
 
 B<Optional>. Takes either C<undef> or an arrayref. Specifies the keys in the cell (i.e.
 the second-level key inside the first-level key) in Main Config File from where to take the
-data. When set to an arrayref, the elemeants of the arrayref represent the names of the keys.
+data. When set to an arrayref, the elements of the arrayref represent the names of the keys.
 When set to C<undef> all keys will be taken. Note that C<config_cell> must point to
 a hashref. B<Defaults to:> C<undef>
 

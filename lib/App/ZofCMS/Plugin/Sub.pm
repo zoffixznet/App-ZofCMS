@@ -44,7 +44,7 @@ The module is a plugin for L<App::ZofCMS> that allows you to execute a sub... by
 plugin's priority setting you, effectively, can set the priority of the sub. Not much but I
 need this.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE AND ZofCMS TEMPLATE FIRST-LEVEL KEYS
 

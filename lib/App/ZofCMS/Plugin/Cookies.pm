@@ -101,14 +101,14 @@ read and set HTTP cookies.
 
 To set cookies use C<set_cookies> first level key of your ZofCMS template.
 It's value can be
-either an arrayref or a hashref. When the value is an arrayref elemeants
+either an arrayref or a hashref. When the value is an arrayref elements
 of which are not arrayrefs or hashrefs (example 1 above), or when the value
 is a hashref (example 2 above) it is encapsulated into an arrayref
 automatically to become as shown in (example 3 above). With that in mind,
-each elemeant of an arrayref, which is a value of C<set_cookies> key,
-specifies a certain cookie which plugin must set. When elemeant of that
-arrayref is an arrayref, it must contain two elemeants. The first element
-will be the name of the cookie and the second elemeant will be the value
+each element of an arrayref, which is a value of C<set_cookies> key,
+specifies a certain cookie which plugin must set. When element of that
+arrayref is an arrayref, it must contain two elements. The first element
+will be the name of the cookie and the second element will be the value
 of the cookie. In other words:
 
     set_cookies => [ 'name', 'value', ]
@@ -121,7 +121,7 @@ of the cookie. In other words:
 
     CGI->new->cookie( -name => 'name', -value => 'value' );
 
-When the elemeant is a hashref, it will be dereferenced directy into
+When the element is a hashref, it will be dereferenced directy into
 L<CGI>'s C<cookie()> method, in other words:
 
     set_cookies => { -name => 'name', -value => 'value' }
@@ -130,7 +130,7 @@ L<CGI>'s C<cookie()> method, in other words:
 
     CGI->new->cookie( -name => 'name', -value => 'value' );
 
-See documeantation of L<CGI> module for possible values.
+See documentation of L<CGI> module for possible values.
 
 If C<set_cookies> key is not present, no cookies will be set.
 

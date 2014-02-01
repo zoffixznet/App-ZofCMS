@@ -523,7 +523,7 @@ restrict access to some pages based on user accounts (which support "roles")
 
 Plugin uses HTTP cookies to set user sessions.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 NOTE ON LOGINS
@@ -592,7 +592,7 @@ C<plug_login> first-level key.
     dsn => "DBI:mysql:database=test;host=localhost",
 
 B<Mandatory>. The C<dsn> key will be passed to L<DBI>'s C<connect_cached()>
-method, see documeantation for L<DBI> and C<DBD::your_database> for the
+method, see documentation for L<DBI> and C<DBD::your_database> for the
 correct syntax of this one. The example above uses MySQL database called
 C<test> which is location on C<localhost>
 
@@ -630,7 +630,7 @@ as "options". B<Defaults to:> C<< { RaiseError => 1, AutoCommit => 0 } >>
         $template->{d}{plug_login_user} = $user_ref;
     },
 
-B<Optional>. Takes a subref as an argumeant. When specified the subref will be called and
+B<Optional>. Takes a subref as an argument. When specified the subref will be called and
 its C<@_> will contain the following: C<$user_ref>, C<$template_ref>, C<$query_ref>,
 C<$config_obj>, where C<$user_ref> will be either C<undef> (e.g. when user is not logged on)
 or will contain an arrayref with user data pulled from the SQL table, i.e. an arrayref
@@ -655,7 +655,7 @@ B<Defaults to:> (will stick user data into C<{d}{plug_login_user}> in ZofCMS tem
 
 B<Optional>. Specifies what page is a page with a login form. The check will
 be done against a "page" that is constructed by C<$query{dir} . $query{page}>
-(the C<dir> and C<page> are discussed in ZofCMS's core documeantation).
+(the C<dir> and C<page> are discussed in ZofCMS's core documentation).
 The value for the C<login_page> key can be either a string or a regex.
 B<Note:> the access is B<NOT> restricted to pages matching C<login_page>.
 B<Defaults to:> C</login>
@@ -736,13 +736,13 @@ she logged out.
 
 B<Optional> but doesn't make sense to not specify this one.
 B<By default> is not specified. Takes an arrayref
-as a value. Elemeants of this arrayref can be as follows:
+as a value. Elements of this arrayref can be as follows:
 
 =head3 a string
 
     restricted => [ qw(/foo /bar) ],
 
-Elemeants that are plain strings represent direct pages ( page is made out of
+Elements that are plain strings represent direct pages ( page is made out of
 $query{dir} . $query{page} ). The example above will restrict access
 only to pages C<http://foo.com/index.pl?page=foo> and
 C<http://foo.com/index.pl?page=bar> for users that are not logged in.
@@ -751,7 +751,7 @@ C<http://foo.com/index.pl?page=bar> for users that are not logged in.
 
     restricted => [ qr|^/foo/| ],
 
-Elemeants that are regexes (C<qr//>) will be matched against the page. If
+Elements that are regexes (C<qr//>) will be matched against the page. If
 the page matches the given regex access will be restricted to any user
 who is not logged in.
 
@@ -896,7 +896,7 @@ user.
 
 =head2 C<plug_login_session_id>
 
-If you set C<no_cookies> argumeant to a true value, this key will contain
+If you set C<no_cookies> argument to a true value, this key will contain
 session ID.
 
 =head1 GENERATED HTML CODE

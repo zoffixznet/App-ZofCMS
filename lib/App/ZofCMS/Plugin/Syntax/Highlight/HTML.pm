@@ -98,7 +98,7 @@ The module is a plugin for L<App::ZofCMS>. It provides means to include
 HTML (HyperText Markup Lanugage) code snippets with syntax
 highlights on your pages.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 USED FIRST-LEVEL ZofCMS TEMPLATE KEYS
@@ -224,13 +224,13 @@ the following code:
 
 Now you'd use CSS to highlight specific parts of HTML syntax.
 Here are the classes that you can define in your stylesheet (list
-shamelessly stolen from L<Syntax::Highlight::HTML> documeantation):
+shamelessly stolen from L<Syntax::Highlight::HTML> documentation):
 
 =over 4
 
 =item *
 
-C<.h-decl> - for a markup declaration; in a HTML documeant, the only
+C<.h-decl> - for a markup declaration; in a HTML document, the only
 markup declaration is the C<DOCTYPE>, like:
 C<< <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"> >>
 
@@ -249,7 +249,7 @@ C<.h-ab> - for the characters C<< '<' >> and C<< '>' >> as tag delimiters
 
 =item *
 
-C<.h-tag> - for the tag name of an elemeant
+C<.h-tag> - for the tag name of an element
 
 =item *
 
@@ -273,7 +273,7 @@ C<.h-lno> - for the line numbers
 
 Sebastien Aperghis-Tramoni, the author of L<Syntax::Highlight::HTML>,
 was kind enough to provide sample CSS code defining the look of each
-elemeant of HTML syntax. It is presented below:
+element of HTML syntax. It is presented below:
 
     .h-decl { color: #336699; font-style: italic; }   /* doctype declaration  */
     .h-pi   { color: #336699;                     }   /* process instruction  */

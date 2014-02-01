@@ -148,7 +148,7 @@ The module is a plugin for L<App::ZofCMS>. It provides means to add
 a "breadcrumbs" (L<http://en.wikipedia.org/wiki/Breadcrumb_(navigation)>)
 to your pages.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 HOW DOES IT WORK
@@ -160,7 +160,7 @@ determined as follows. If the page is not called C<index> then the
 C<index> page in the current "directory" will be added to the breadcrumbs,
 the "path" will be broken down to pieces and C<index> page in each piece
 will be added to the breadcrumbs. B<Note:> the examples below assume
-that the C<no_pages> argumeant was not specified:
+that the C<no_pages> argument was not specified:
 
     # page
     index.pl?page=/foo/bar/baz
@@ -238,9 +238,9 @@ plugin will generate C<< <ul> >> based breadcrumbs. B<Default to:> false.
 
     { no_pages => [ '/comments', '/index' ], }
 
-B<Optional>. Takes an arrayref as a value. Each elemeant of that array
+B<Optional>. Takes an arrayref as a value. Each element of that array
 must be a C<dir> + C<page> (as described in I<Note on page and dir query
-parameters> in L<App::ZofCMS::Config>). If a certain elemeant of that
+parameters> in L<App::ZofCMS::Config>). If a certain element of that
 array matches the page in the breadcrumbs being generated it will be
 removed from the breadcrumbs. In other words, if you specify
 C<< no_pages => [ '/index' ] >> the "index" page of the "root"

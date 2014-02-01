@@ -81,7 +81,7 @@ The module is a simple drop in to stick query into database. The module does not
 parameter checking and is very basic. For anything more advanced check out
 L<App::ZofCMS::Plugin::DBI>
 
-This documeantation assumes you have read L<App::ZofCMS>,
+This documentation assumes you have read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE OR ZofCMS TEMPLATE FIRST LEVEL KEYS
@@ -136,7 +136,7 @@ key C<d> is set to a true value and C<go_field> references that value with C<d|f
 
         values => [ qw/one two/ ],
 
-B<Mandatory>. The C<values> key takes an arrayref as a value. The elemeants of that arrayref
+B<Mandatory>. The C<values> key takes an arrayref as a value. The elements of that arrayref
 represent the names of query parameters that you wish to stick into the database.
 Under the hood of the module the following is being called:
 
@@ -160,7 +160,7 @@ B<Mandatory>. Specifies the name of the table into which you wish to store the d
 
     dsn => "DBI:mysql:database=test;host=localhost",
 
-B<Mandatory>. Specifies the I<dsn> to use in DBI connect call. See documeantation for
+B<Mandatory>. Specifies the I<dsn> to use in DBI connect call. See documentation for
 L<DBI> and C<DBD::your_database> for proper syntax for this string.
 
 =head2 C<user>

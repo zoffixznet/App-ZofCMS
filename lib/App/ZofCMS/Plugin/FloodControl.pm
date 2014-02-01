@@ -144,7 +144,7 @@ The needed table needs to have these three columns:
 
     CREATE TABLE flood_table (host VARCHAR(250), time VARCHAR(10), id VARCHAR(5));
 
-The value type of the C<id> column can be different depending on what C<flood_id> argumeants
+The value type of the C<id> column can be different depending on what C<flood_id> arguments
 you'd use (see docs below for more).
 
 =head1 DESCRIPTION
@@ -152,7 +152,7 @@ you'd use (see docs below for more).
 The module is a plugin for L<App::ZofCMS>. It provides means to detect flood (abuse) and
 react accordingly depending on whether or not flood was detected.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE AND ZofCMS TEMPLATE FIRST-LEVEL KEYS
 
@@ -287,7 +287,7 @@ ZofCMS Template special key, or any first-level ZofCMS Template key (also, see C
 option below). The value of the C<cell> key specifies where the plugin will look for the
 C<trigger> (see above). Possible values for C<cell> key are: C<q> (query), C<d> (C<{d}> key),
 C<t> (C<{t}> key) or empty string (first-level ZofCMS Template key). For every C<cell> value
-but the C<q>, the trigger (i.e. the key referenced by the C<trigger> argumeant) must be set
+but the C<q>, the trigger (i.e. the key referenced by the C<trigger> argument) must be set
 to a true value in order for the plugin to trigger. When C<cell> is set to value C<q>, then
 the query parameter referenced by C<trigger> must have C<length()> in order for the plugin
 to trigger. B<Defaults to:> C<q>
@@ -296,8 +296,8 @@ to trigger. B<Defaults to:> C<q>
 
     run => 0,
 
-B<Optional>. An alternative to using C<cell> and C<trigger> argumeants you can set
-(e.g. dynamically with some other plugin) the C<run> argumeant to a true value. Takes
+B<Optional>. An alternative to using C<cell> and C<trigger> arguments you can set
+(e.g. dynamically with some other plugin) the C<run> argument to a true value. Takes
 either true or false values. When set to a true value plugin will "trigger" (check for floods)
 without any consideration to C<cell> and C<trigger> values. B<Defaults to:> C<0>
 

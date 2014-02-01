@@ -12,7 +12,7 @@ __END__
 
 =head1 NAME
 
-App::ZofCMS::Plugin - documeantation for ZofCMS plugin authors
+App::ZofCMS::Plugin - documentation for ZofCMS plugin authors
 
 =head1 SYNOPSIS
 
@@ -41,7 +41,7 @@ App::ZofCMS::Plugin - documeantation for ZofCMS plugin authors
 
 =head1 DESCRIPTION
 
-This documeantation is intended for ZofCMS plugin authors, whether you are
+This documentation is intended for ZofCMS plugin authors, whether you are
 coding a plugin for personal use or planning to upload to CPAN. Uploads
 are more than welcome.
 
@@ -52,7 +52,7 @@ At the very least the plugin must contain to subs:
     sub new { bless {}, shift }
 
 This is a constructor, you don't have to use a hashref for the object but
-it's recommended. Currently no argumeants (except a class name) are passed
+it's recommended. Currently no arguments (except a class name) are passed
 to C<new()> but that may be changed in the future.
 
 Second required sub is C<sub process {}> the C<@_> will contain the

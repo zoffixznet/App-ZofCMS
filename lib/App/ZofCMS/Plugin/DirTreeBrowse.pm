@@ -157,7 +157,7 @@ In your L<HTML::Template> template:
 The module is an L<App::ZofCMS> plugin that provides means to display a browseable directory
 three (list of files and other dirs).
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE AND ZofCMS TEMPLATE FIRST-LEVEL KEYS
 
@@ -219,7 +219,7 @@ directory is relative to your C<index.pl> file and must be web-accessible.
 
 B<Optional>. When set to a C<defined> value will cause the
 plugin to generate directory tree HTML automatically, the value then will become the
-classname for the C<< <ul> >> elemeant that holds the list of files/dirs. See SYNOPSIS and
+classname for the C<< <ul> >> element that holds the list of files/dirs. See SYNOPSIS and
 HTML::Template VARIABLES sectons for more details. B<Note:> the plugin does not append
 current query to links, so if you wish to add something to the query parameters
 
@@ -273,7 +273,7 @@ B<By default> is not specified.
 
 =head1 HTML::Template VARIABLES
 
-The samples below assume that the plugin is run with all of its optional argumeants set to
+The samples below assume that the plugin is run with all of its optional arguments set to
 defaults.
 
 =head2 When C<auto_html> is turned on

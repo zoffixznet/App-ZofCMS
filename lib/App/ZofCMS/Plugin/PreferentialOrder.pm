@@ -385,7 +385,7 @@ code that controls the order of items on the page and submits that
 information to the server.
 
 If you wish to use a different, your own front-end, please study JS code
-provided at the end of this documeantation to understand what is required.
+provided at the end of this documentation to understand what is required.
 
 =head1 SYNOPSIS
 
@@ -399,7 +399,7 @@ In your ZofCMS template:
 
     plugins => [ qw/PreferentialOrder/, ],
 
-    # except for the mandatory argumeant `items`, the default values are shown
+    # except for the mandatory argument `items`, the default values are shown
     plug_preferential_order => {
         items => [ # four value type variations shown here
             forum3  => '<a href="#">Forum3</a>',
@@ -409,7 +409,7 @@ In your ZofCMS template:
                 'Second forum ":)"',
                 sub {
                     my ( $t, $q, $config ) = @_;
-                    return '$value_for_the_second_elemeant_in_the_arrayref';
+                    return '$value_for_the_second_element_in_the_arrayref';
                 },
             ],
         ],
@@ -437,14 +437,14 @@ individual user to suit their needs. The order is defined using a form
 provided by the plugin, the actual sorting is done by
 I<MooTools> (L<http://mootools.net>) JS framework. Use of this framework
 is not a necessity; it's up to you what you'll use as a front-end. An
-example of MooTools front-end is provided at the end of this documeantation.
+example of MooTools front-end is provided at the end of this documentation.
 
 The plugin provides two modes: single sortable list, and double lists,
 where the second list represents "disabled" items, although that can
 well be used for having two lists with items being sorted between each of
 them (e.g. primary and secondary navigations).
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
@@ -458,7 +458,7 @@ execute.
 
 =head2 C<plug_preferential_order>
 
-    # except for the mandatory argumeant `items`, the default values are shown
+    # except for the mandatory argument `items`, the default values are shown
     plug_preferential_order => {
         items => [ # four value type variations shown here
             forum3  => '<a href="#">Forum3</a>',
@@ -468,7 +468,7 @@ execute.
                 'Second forum ":)"',
                 sub {
                     my ( $t, $q, $config ) = @_;
-                    return '$value_for_the_second_elemeant_in_the_arrayref';
+                    return '$value_for_the_second_element_in_the_arrayref';
                 },
             ],
         ],
@@ -516,7 +516,7 @@ keys/values for the hashref are as follows:
                 'Second forum ":)"',
                 sub {
                     my ( $t, $q, $config ) = @_;
-                    return '$value_for_the_second_elemeant_in_the_arrayref';
+                    return '$value_for_the_second_element_in_the_arrayref';
                 },
             ],
         ],
@@ -535,7 +535,7 @@ specified, its return value will be assigned to C<items> as if it was
 already there. The C<@_> of the subref will contain C<$t>,
 C<$q>, and C<$config> (in that order), where C<$t> is ZofCMS Tempalate
 hashref, C<$q> is query parameter hashref and C<$config> is
-L<App::ZofCMS::Config> object. This argumeant tells the plugin the items on
+L<App::ZofCMS::Config> object. This argument tells the plugin the items on
 the list you want the user to sort and use.
 
 The insides of the arrayref are best to be thought as keys/values of a
@@ -614,7 +614,7 @@ will be relative to C<index.pl> file.
     ...
 
 B<Optional, but with useless default value>. The dsn key will be passed to
-L<DBI>'s C<connect_cached()> method, see documeantation for L<DBI> and
+L<DBI>'s C<connect_cached()> method, see documentation for L<DBI> and
 C<DBD::your_database> for the correct syntax for this one. The example
 above uses MySQL database called C<test> that is located on C<localhost>.
 B<Defaults to:> C<DBI:mysql:database=test;host=localhost>
@@ -744,7 +744,7 @@ order>, the divisions between the two lists will be preserved.
 Originally, this was designed to have "enabled" and "disabled" groups of
 items, hence the naming of this and few other options; the "enabled"
 represents the list that is always shown, and the "disabled" represents
-the list that is toggleable with C<has_disabled> argumeant. B<Defaults to:>
+the list that is toggleable with C<has_disabled> argument. B<Defaults to:>
 C<1> (second list is enabled)
 
 =head3 C<enabled_label>
@@ -846,12 +846,12 @@ enabled and disabled lists of constant size)
     function add_sorted_list_input() {
         var result = $('ppof_order').zof_sortables.serialize(
             0,
-            function(elemeant, index){
-                return elemeant.getProperty('id').replace('ppof_order_item_','');
+            function(element, index){
+                return element.getProperty('id').replace('ppof_order_item_','');
             }
         ).join(',');
 
-        var result_el = new Elemeant ('input', {
+        var result_el = new Element ('input', {
             'type': 'hidden',
             'name': 'ppof_order',
             'value': result
@@ -860,12 +860,12 @@ enabled and disabled lists of constant size)
 
         var result_disabled = $('ppof_order').zof_sortables.serialize(
             1,
-            function(elemeant, index){
-                return elemeant.getProperty('id').replace('ppof_order_item_','');
+            function(element, index){
+                return element.getProperty('id').replace('ppof_order_item_','');
             }
         ).join(',');
 
-        var result_el_disabled = new Elemeant ('input', {
+        var result_el_disabled = new Element ('input', {
             'type': 'hidden',
             'name': 'ppof_order_disabled',
             'value': result_disabled
@@ -970,10 +970,10 @@ structure for you to quickly play with the plugin to decide if you need it:
     </div>
     </form>
 
-This form shows the default argumeants for C<enabled_label>,
+This form shows the default arguments for C<enabled_label>,
 C<disabled_label> and C<submit_button>. Note that C<id=""> attributes on
 the list items are partially made out of the "keys" set in C<items>
-argumeant. The value for C<page> hidden C<input> is derived by the
+argument. The value for C<page> hidden C<input> is derived by the
 plugin automagically.
 
 =head2 "Enabled" Sorted List

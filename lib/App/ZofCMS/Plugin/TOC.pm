@@ -111,12 +111,12 @@ ZofCMS template (C<< plugins => [ qw/TOC/ ] >>) and placing
 C<< <tmpl_var name="page_toc"> >> in your L<HTML::Template> template
 you also need to create
 a C<page_toc> first level key in ZofCMS template. That key's value is an
-arrayref each elemeant of which can be either an arrayref or a scalar.
-B<If the elemeant is a scalar it is the same as it being an arrayref with one
-elemeant>. The element which is an arrayref can contain either one, two or
-three elemeants itself. Which represent the following:
+arrayref each element of which can be either an arrayref or a scalar.
+B<If the element is a scalar it is the same as it being an arrayref with one
+element>. The element which is an arrayref can contain either one, two or
+three elements itself. Which represent the following:
 
-=head2 arrayref which contains only one elemeant
+=head2 arrayref which contains only one element
 
     page_toc => [
         '#foo',
@@ -130,7 +130,7 @@ three elemeants itself. Which represent the following:
         [ '#bar-baz' ],
     ],
 
-The first (and only) elemeant will be used in C<href=""> attribute
+The first (and only) element will be used in C<href=""> attribute
 of the generated link. The text of the link will be determined
 automatically, in particular the C<'#'> will be removed, first letter
 will be capitalized and any dashes C<'-'> or underscores C<'_'> will
@@ -143,15 +143,15 @@ C<< <tmpl_var name="page_toc"> >>:
         <li><a href="#bar-baz">Bar Baz</a></li>
     </ul>
 
-=head2 arrayref which contains two elemeants
+=head2 arrayref which contains two elements
 
     page_toc => [
         [ '#foo', 'Foos Lots of Foos!' ],
         [ '#bar-baz', 'Bar-baz' ],
     ],
 
-The first elemeant will be used in C<href=""> attribute
-of the generated link. The second elemeant will be used as text for the
+The first element will be used in C<href=""> attribute
+of the generated link. The second element will be used as text for the
 link. The example above will generate the following code:
 
     <ul class="page_toc">
@@ -159,17 +159,17 @@ link. The example above will generate the following code:
         <li><a href="#bar-baz">Bar-baz</a></li>
     </ul>
 
-=head2 arrayref which contains three elemeants
+=head2 arrayref which contains three elements
 
     page_toc => [
         [ '#foo', 'Foos Lots of Foos!', 'foos' ],
         [ '#bar-baz', 'Bar-baz', 'bars' ],
     ],
 
-The first elemeant will be used in C<href=""> attribute
-of the generated link. The second elemeant will be used as text for the
+The first element will be used in C<href=""> attribute
+of the generated link. The second element will be used as text for the
 link. The third elemenet will be used to create a C<class=""> attribute
-on the C<< <li> >> elemeant for the corresponding entry.
+on the C<< <li> >> element for the corresponding entry.
 The example above will generate the following code:
 
     <ul class="page_toc">
@@ -177,7 +177,7 @@ The example above will generate the following code:
         <li class="bars"><a href="#bar-baz">Bar-baz</a></li>
     </ul>
 
-Note: the class of the C<< <ul> >> elemeant is always C<page_toc>
+Note: the class of the C<< <ul> >> element is always C<page_toc>
 
 =head1 REPOSITORY
 

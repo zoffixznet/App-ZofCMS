@@ -138,7 +138,7 @@ converting numerical output of C<time()> with C<localtime()> as well
 as changing new lines in regular text data into C<br>s while escaping
 HTML Entities.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 DO I HAVE TO USE DBI PLUGIN?
@@ -178,7 +178,7 @@ any other plugins generate data for processing.
     # run with all the defaults
     plug_dbippt => {},
 
-    # all argumeants specified (shown are default values)
+    # all arguments specified (shown are default values)
     plug_dbippt => {
         cell    => 't',
         key     => 'dbi',
@@ -244,7 +244,7 @@ to C<key> as if it was already there. The C<@_> will contain
 L<App::ZofCMS::Config> object. Passing (or returning from the sub)
 a string is the same as passing an arrayref with just that string in it.
 
-Each elemeant of the arrayref specifies the second-level key(s) inside
+Each element of the arrayref specifies the second-level key(s) inside
 C<cell> first-level key value of which is an arrayref of either hashrefs
 or arrayrefs (i.e. typical output of L<App::ZofCMS::Plugin::DBI>).
 B<Defaults to:> C<dbi>
@@ -273,8 +273,8 @@ B<Defaults to:> C<dbi>
     }
 
 B<Optional>. Pneumonic: B<n>ew lines. Keys/indexes specified in
-C<n> argumeant will have HTML entities escaped and new lines converted
-to C<< <br> >> HTML elemeants.
+C<n> argument will have HTML entities escaped and new lines converted
+to C<< <br> >> HTML elements.
 
 Takes either a string, subref or an arrayref as a value. If the value is a subref,
 that subref will be executed and its return value will be assigned
@@ -284,8 +284,8 @@ L<App::ZofCMS::Config> object. Passing (or returning from the sub)
 a string is the same as passing an arrayref with just that string in it.
 If set to C<undef> no processing will be done for new lines.
 
-Each elemeant of the arrayref specifies either the B<keys> of the hashrefs
-(for DBI plugin that would be when second elemeant of C<sql> arrayref
+Each element of the arrayref specifies either the B<keys> of the hashrefs
+(for DBI plugin that would be when second element of C<sql> arrayref
 is set to C<< { Slice => {} } >>) or B<indexes> of the arrayrefs
 (if they are arrayrefs).
 B<Defaults to:> C<undef>
@@ -314,7 +314,7 @@ B<Defaults to:> C<undef>
     }
 
 B<Optional>. Pneumonic: B<t>ime. Keys/indexes specified in
-C<t> argumeant are expected to point to either C<undef> or empty string, in which case, no conversion will
+C<t> argument are expected to point to either C<undef> or empty string, in which case, no conversion will
 be done, or values of C<time()> output
 and what will be done is C<scalar localtime($v)> (where C<$v>) is
 the original value) run on them and the return is assigned back to
@@ -329,8 +329,8 @@ L<App::ZofCMS::Config> object. Passing (or returning from the sub)
 a string is the same as passing an arrayref with just that string in it.
 If set to C<undef> no processing will be done.
 
-Each elemeant of the arrayref specifies either the B<keys> of the hashrefs
-(for DBI plugin that would be when second elemeant of C<sql> arrayref
+Each element of the arrayref specifies either the B<keys> of the hashrefs
+(for DBI plugin that would be when second element of C<sql> arrayref
 is set to C<< { Slice => {} } >>) or B<indexes> of the arrayrefs
 (if they are arrayrefs).
 B<Defaults to:> C<time>

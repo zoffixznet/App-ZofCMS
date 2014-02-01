@@ -355,11 +355,11 @@ In L<HTML::Template> template:
 =head1 DESCRIPTION
 
 The module is a plugin for L<App::ZofCMS> that provides means to generate several
-C<< <select> >> elemeants for date and time selection by the user. Plugin also provides means
+C<< <select> >> elements for date and time selection by the user. Plugin also provides means
 to "parse" those C<< <select> >>s from the query to generate either epoch time, same string
 as C<localtime()> or access each selection individually from a hashref.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
 
@@ -410,7 +410,7 @@ of its defaults use C<< plug_date_selector => {} >>
 
 The C<plug_date_selector> key takes either hashref or an arrayref as a value. If the value
 is a hashref, it is the same as specifying an arrayref with just that hashref in it. Each
-hashref represents a separate "date selector", i.e. a set of C<< <select> >> elemeants for
+hashref represents a separate "date selector", i.e. a set of C<< <select> >> elements for
 date selection. The possible keys/values of each of those hashrefs are as follows:
 
 =head3 C<class>
@@ -418,14 +418,14 @@ date selection. The possible keys/values of each of those hashrefs are as follow
     class => 'date_selector',
 
 B<Optional>. Specifies the C<class=""> attribute to stick on every generated C<< <select> >>
-elemeant in the date selector. B<Defaults to:> C<date_selector>
+element in the date selector. B<Defaults to:> C<date_selector>
 
 =head3 C<id>
 
     id => 'date_selector',
 
 B<Optional>. Specifies the C<id=""> attribute to stick on the B<first> generated
-C<< <select> >> elemeant in the date selector. B<By default> is not specified, i.e. no C<id="">
+C<< <select> >> element in the date selector. B<By default> is not specified, i.e. no C<id="">
 will be added.
 
 =head3 C<q_name>
@@ -433,8 +433,8 @@ will be added.
     q_name => 'date',
 
 B<Optional>. Specifies the "base" B<q>uery parameter name for generated C<< <select> >>
-elemeants.
-Each of those elemeants will have its C<name=""> attribute made from C<$q_name . '_' . $type>,
+elements.
+Each of those elements will have its C<name=""> attribute made from C<$q_name . '_' . $type>,
 where C<$q_name> is the value of C<q_name> key and C<$type> is the type of the
 C<< <select> >>, the types are as follows: C<year>, C<month>, C<day>, C<hour>, C<minute>
 and C<second>. B<Defaults to:> C<date>
@@ -505,7 +505,7 @@ do bits->{year} + 1900.
 
     start => time() - 30000000,
 
-B<Optional>. The plugin will generate values for C<< <select> >> elemeants to cover a certain
+B<Optional>. The plugin will generate values for C<< <select> >> elements to cover a certain
 period of time. The C<start> and C<end> (see below) parameters take the number of seconds
 from epoch (i.e. same as return of C<time()>) as values and C<start> indicates the start
 of the period to cover and C<end> indicates the end of the time period to cover. B<Defaults
@@ -540,7 +540,7 @@ C<minute> and C<second>. B<Defaults to:> C<year>
 B<Optional>. Specifies the "step" of minutes to display, in other words, when C<minute_step>
 is set to C<10>, then in the "minutes" C<< <select> >>
 the plugin will generate only C<< <option> >>s 0, 10, 20, 30, 40 and 50. B<Defaults to:>
-C<5> (incremeants of 5 minutes).
+C<5> (increments of 5 minutes).
 
 =head3 C<second_step>
 
@@ -549,11 +549,11 @@ C<5> (incremeants of 5 minutes).
 B<Optional>. Specifies the "step" of seconds to display, in other words, when C<second_step>
 is set to C<10>, then in the "minutes" C<< <select> >>
 the plugin will generate only C<< <option> >>s 0, 10, 20, 30, 40 and 50. B<Defaults to:>
-C<5> (incremeants of 5 minutes).
+C<5> (increments of 5 minutes).
 
 =head1 HTML::Template VARIABLES
 
-See description of C<t_name> argumeant above. The value of C<t_name> specifies the name
+See description of C<t_name> argument above. The value of C<t_name> specifies the name
 of the C<< <tmpl_var name=""> >> plugin will generate. Note that there could be several of
 these of you are generating several date selectors.
 

@@ -269,7 +269,7 @@ address and a message he or she wants to send. After checking all of the
 provided values plugin will e-mail the data which the visitor entered to
 the address which you specified.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 HTML TEMPLATE
@@ -330,8 +330,8 @@ as follows:
     to => [ 'foo@example.com', 'bar@example.com'],
 
 B<Mandatory>. Takes either a string or an arrayref as a value. Passing the
-string is equivalent to passing an arrayref with just one elemeant. Each
-elemeant of that arrayref must contain a valid e-mail address, upon
+string is equivalent to passing an arrayref with just one element. Each
+element of that arrayref must contain a valid e-mail address, upon
 successful completion of the quicknote form by the visitor the data on that
 form will be emailed to all of the addresses which you specify here.
 
@@ -340,7 +340,7 @@ form will be emailed to all of the addresses which you specify here.
     mailer => 'testfile',
 
 B<Optional>. Specifies which mailer to use for sending mail.
-See documeantation for L<Mail::Mailer> for possible mailers. When using the
+See documentation for L<Mail::Mailer> for possible mailers. When using the
 C<testfile> mailer the file will be located in the same directory your
 in which your C<index.pl> file is located. B<By default> plugin will
 do the same thing L<Mail::Mailer> will (search for the first
@@ -359,14 +359,14 @@ B<Defaults to:> C<Quicknote>
     must_email  => 1,
     must_message => 1,
 
-B<Optional>. The C<must_name>, C<must_email> and C<must_message> argumeants
+B<Optional>. The C<must_name>, C<must_email> and C<must_message> arguments
 specify whether or not the "name", "e-mail" and "message" form fields
 are mandatory. When set to a true value indicate that the field is
 mandatory. When set to a false value the form field will be filled with
 C<N/A> unless specified by the visitor. Visitor will be shown an error
 message if he or she did not specify some mandatory field.
 B<By default> only the
-C<must_message> argumeant is set to a true value (thus the vistior does
+C<must_message> argument is set to a true value (thus the vistior does
 not have to fill in neither the name nor the e-mail).
 
 =head3 C<name_max>, C<email_max> and C<message_max>
@@ -375,7 +375,7 @@ not have to fill in neither the name nor the e-mail).
     email_max   => 20,
     message_max => 1000,
 
-B<Optional>. Alike C<must_*> argumeants, the
+B<Optional>. Alike C<must_*> arguments, the
 C<name_max>, C<email_max> and C<message_max> specify max lengths of
 form fields. Visitor will be shown an error message if any of the
 parameters exceed the specified maximum lengths. B<By default> the value

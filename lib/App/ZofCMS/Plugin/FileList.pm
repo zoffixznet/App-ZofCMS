@@ -93,7 +93,7 @@ In your L<HTML::Template> template:
 
 Module is a L<App::ZofCMS> plugin which provides means to display lists of files.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE OR ZofCMS TEMPLATE FIRST-LEVEL KEYS
@@ -192,7 +192,7 @@ as is shown in conversion examples above.
         list => 'pics',
     },
 
-B<Optional>. The C<re> argumeant takes a regex as a value (C<qr//>). If specified only the files
+B<Optional>. The C<re> argument takes a regex as a value (C<qr//>). If specified only the files
 that match the regex will be listed. B<By default> is not specified.
 
 =head2 C<name>

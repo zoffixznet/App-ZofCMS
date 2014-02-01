@@ -288,7 +288,7 @@ sub process {
     keys %html_els;
     while ( my ( $el, $link ) = each %html_els ) {
         my $link_start
-        = qq|<a href="$link" title="HTML Specification: '&lt;$el&gt;\' elemeant">|;
+        = qq|<a href="$link" title="HTML Specification: '&lt;$el&gt;\' element">|;
         @{ $template->{t} }{
             "html_$el",
             "html_${el}_e",
@@ -296,9 +296,9 @@ sub process {
             "html_${el}_ce",
         } = (
             $link_start . qq|<code>&lt;$el&gt;</code></a>|,
-            $link_start . qq|<code>&lt;$el&gt;</code> elemeant</a>|,
+            $link_start . qq|<code>&lt;$el&gt;</code> element</a>|,
             $link_start . qq|&lt;$el&gt;</a>|,
-            $link_start . qq|&lt;$el&gt; elemeant</a>|,
+            $link_start . qq|&lt;$el&gt; element</a>|,
         );
     }
 
@@ -312,7 +312,7 @@ __END__
 
 =head1 NAME
 
-App::ZofCMS::Plugin::LinksToSpecs::HTML - easily include links to elemeants in HTML 4.01 specification
+App::ZofCMS::Plugin::LinksToSpecs::HTML - easily include links to elements in HTML 4.01 specification
 
 =head1 SYNOPSIS
 
@@ -322,14 +322,14 @@ In your ZofCMS template:
 
 In your L<HTML::Template> template:
 
-    See: <tmpl_var name="html_div"> for div elemeant<br>
-    See: <tmpl_var name="html_blockquote"> for blockquote elemeant<br>
+    See: <tmpl_var name="html_div"> for div element<br>
+    See: <tmpl_var name="html_blockquote"> for blockquote element<br>
     <tmpl_var name="html_a_ce"> is used for links.
 
 =head1 DESCRIPTION
 
 The module is a plugin for ZofCMS which allows you to easily link to
-HTML elemeants in HTML 4.01 specification. Personally, I use it when writing
+HTML elements in HTML 4.01 specification. Personally, I use it when writing
 my tutorials, hopefully it will be useful to someone else as well.
 
 =head1 ZofCMS TEMPLATE
@@ -341,28 +341,28 @@ into the list of plugins to execute.
 
 =head1 HTML::Template TEMPLATE
 
-    See: <tmpl_var name="html_div"> for div elemeant<br>
-    See: <tmpl_var name="html_blockquote"> for blockquote elemeant<br>
+    See: <tmpl_var name="html_div"> for div element<br>
+    See: <tmpl_var name="html_blockquote"> for blockquote element<br>
     <tmpl_var name="html_a_ce"> is used for links.
 
-To include links to HTML elemeants in your HTML code you'd use
+To include links to HTML elements in your HTML code you'd use
 C<< <tmpl_var name=""> >>. The plugin provides four "styles" of links which
-are presented below. The C<EL> stands for any HTML elemeant specified in
+are presented below. The C<EL> stands for any HTML element specified in
 HTML 4.01 specification, C<LINK> stands for the link pointing to the
-explaination of the given elemeant in HTML specification. B<Note:>
+explaination of the given element in HTML specification. B<Note:>
 everything needs to be lowercased:
 
     <tmpl_var name="html_EL">
-    <a href="LINK" title="HTML Specification: '&amp;lt;EL&amp;gt;' elemeant"><code>&amp;lt;EL&amp;gt;</code></a>
+    <a href="LINK" title="HTML Specification: '&amp;lt;EL&amp;gt;' element"><code>&amp;lt;EL&amp;gt;</code></a>
 
     <tmpl_var name="html_EL_e">
-    <a href="LINK" title="HTML Specification: '&amp;lt;EL&amp;gt;' elemeant"><code>&amp;lt;EL&amp;gt;</code> element</a>
+    <a href="LINK" title="HTML Specification: '&amp;lt;EL&amp;gt;' element"><code>&amp;lt;EL&amp;gt;</code> element</a>
 
     <tmpl_var name="html_EL_c">
-    <a href="LINK" title="HTML Specification: '&amp;lt;EL&amp;gt;' elemeant">&amp;lt;EL&amp;gt;</a>
+    <a href="LINK" title="HTML Specification: '&amp;lt;EL&amp;gt;' element">&amp;lt;EL&amp;gt;</a>
 
     <tmpl_var name="html_EL_ce">
-    <a href="LINK" title="HTML Specification: '&amp;lt;EL&amp;gt;' elemeant">&amp;lt;EL&amp;gt; element</a>
+    <a href="LINK" title="HTML Specification: '&amp;lt;EL&amp;gt;' element">&amp;lt;EL&amp;gt; element</a>
 
 =head1 SEE ALSO
 

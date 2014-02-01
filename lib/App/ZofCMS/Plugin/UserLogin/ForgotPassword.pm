@@ -506,7 +506,7 @@ In your Main Config File or ZofCMS Template:
         dsn                  => "DBI:mysql:database=test;host=localhost",
 
         # everything below is optional...
-        # ...argumeants' default values are shown
+        # ...arguments' default values are shown
         user                 => '',
         pass                 => undef,
         opt                  => { RaiseError => 1, AutoCommit => 1 },
@@ -543,7 +543,7 @@ establish ligitimate reset) and, finally, to provide a form where a user
 can enter their new password (and of course, the plugin will update
 the password in the C<users> table). Wow, a mouthful of functionality! :)
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>. Whilst not necessary,
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>. Whilst not necessary,
 being familiar with L<App::ZofCMS::Plugin::UserLogin> might be helpful.
 
 =head1 GENERAL OUTLINE OF THE WAY PLUGIN WORKS
@@ -584,7 +584,7 @@ to execute.
         dsn                  => "DBI:mysql:database=test;host=localhost",
 
         # everything below is optional...
-        # ...argumeants' default values are shown
+        # ...arguments' default values are shown
         user                 => '',
         pass                 => undef,
         opt                  => { RaiseError => 1, AutoCommit => 1 },
@@ -637,7 +637,7 @@ are as follows:
     ...
 
 B<Mandatory>. The C<dsn> key will be passed to L<DBI>'s
-C<connect_cached()> method, see documeantation for L<DBI> and
+C<connect_cached()> method, see documentation for L<DBI> and
 C<DBD::your_database> for the correct syntax for this one.
 The example above uses MySQL database called C<test> which is
 located on C<localhost>.
@@ -680,10 +680,10 @@ as "options". B<Defaults to:> C<< { RaiseError => 1, AutoCommit => 1 } >>
 
 B<Optional>. Specifies the name of the SQL table that you're using
 for storing I<user records>. This would be the
-L<App::ZofCMS::Plugin::UserLogin>'s C<table> argumeant. If you're not
+L<App::ZofCMS::Plugin::UserLogin>'s C<table> argument. If you're not
 using that plugin, your users table should have logins stored in
 C<login> column, passwords in C<password> columns. If you're B<not
-planning to specify> the C<email> argumeant (see below), your users
+planning to specify> the C<email> argument (see below), your users
 table need to have email addresses specified in the C<email> table column;
 these will be the email addresses to which the reset links will be emailed.
 B<Defaults to:> C<users>
@@ -704,7 +704,7 @@ B<Optional>. Specifies the name of SQL table into which to store
 reset codes. This table will be used when user submits password reset
 request, and the added entry will be deleted when user successfully enters
 new password. Above SQL code shows the needed structure of the table,
-but see C<create_table> argumeant (below) for more on this.
+but see C<create_table> argument (below) for more on this.
 B<Defaults to:> C<users_forgot_password>
 
 =head3 C<create_table>
@@ -744,10 +744,10 @@ control the name of that parameter. B<Defaults to:> C<pulfp_code>
 
 B<Optional>. B<Defaults to:> C<5:10:60> (5 minute intervals, maximum 10
 attempts per 60 minutes). Takes either C<undef> or specially formatted
-"time code". This argumeant is responsible for abuse control (yey); abuse
+"time code". This argument is responsible for abuse control (yey); abuse
 being the case when an idiot enters some user's login in the reset form and
 then hits browser's REFRESH a billion times, flooding said user. The values
-for this argumeant are:
+for this argument are:
 
 =head4 C<undef>
 
@@ -763,7 +763,7 @@ If set to C<undef>, abuse control will be disabled.
         max_abuse => '5:10:60',
     ...
 
-Unless set to C<undef>, the argumeant's value must be three numbers
+Unless set to C<undef>, the argument's value must be three numbers
 separated by colons. The first number indicates, in minutes, the interval
 of time that must pass after a password reset request until another request
 can be sent I<using the same login> (there's no per-IP protection, or
@@ -839,7 +839,7 @@ B<Defaults to:> C<Password Reset>
 
 B<Optional>. Takes a scalar as a value that specifies the C<From> field for
 your email. If not specified, the plugin will simply not set the C<From>
-argumeant in L<MIME::Lite>'s C<new()> method (which is what this plugin uses
+argument in L<MIME::Lite>'s C<new()> method (which is what this plugin uses
 under the hood). See L<MIME::Lite>'s docs for more description.
 B<Defaults to:> C<undef> (not specified)
 
@@ -862,7 +862,7 @@ enter their new password. When set to C<undef>, the plugin guesses the
 current page (using C<%ENV>) and that's what it will use for the link.
 If you specify the string, make sure to end it with C<pulfp_code=> (note
 the equals sign at the end), where C<pulfp_code> is the value you have set
-for C<q_code> argumeant. B<Defaults to:> C<undef> (makes the plugin guess
+for C<q_code> argument. B<Defaults to:> C<undef> (makes the plugin guess
 the right link)
 
 =head3 C<email_template>
@@ -924,7 +924,7 @@ a link pointing to whatever you set in C<login_page>; otherwise, the
 
 B<Optional>. Takes an arrayref or C<undef> as a value.
 If specified, the arrayref will be directly dereferenced into
-C<< MIME::Lite->send() >>. Here you can set any special send argumeants you
+C<< MIME::Lite->send() >>. Here you can set any special send arguments you
 need; see L<MIME::Lite> docs for more info. B<Note:> if the plugin refuses
 to send email, it could well be that you need to set some
 C<mime_lite_params>; on my box, without anything set, the plugin behaves
@@ -942,7 +942,7 @@ B<Defaults to:> C<undef>
     ...
 
 B<Optional>. Takes either C<undef> or email address(es) as a value.
-This argumeant tells the plugin where to send the email containing password
+This argument tells the plugin where to send the email containing password
 reset link. If set to C<undef>, plugin will look into C<users_table> (see
 above) and will assume that email address is associated with the user's
 account and is stored in the C<email> column of the C<users_table> table.
@@ -990,7 +990,7 @@ C<< <input type="submit" class="input_submit" value="Change password"> >>
     ...
 
 B<Optional>. Takes either true or false values as a value. This
-argumeant is a simple control switch that you can use to tell the plugin
+argument is a simple control switch that you can use to tell the plugin
 not to execute. If set to a true value, plugin will not run.
 B<Defaults to:> C<undef> (for obvious reasons :))
 
@@ -1017,7 +1017,7 @@ page with regard to what stage the plugin is undergoing
 is asking the user for a new password?). This is where I<stage indicators>
 come into play.
 
-Providing C<use_stage_indicators> argumeant (see above) is set to a true
+Providing C<use_stage_indicators> argument (see above) is set to a true
 value, the plugin will set the key with the name of
 appropriate stage indicator to a true value. That key resides in the
 C<{t}> ZofCMS Template special key, so that you could use it in your
@@ -1058,7 +1058,7 @@ C<users_table> table.
     </tmpl_if>
 
 This indicator shows that the plugin detected abuse (see C<max_abuse>
-plugin's argumeant for details).
+plugin's argument for details).
 
 =head2 C<plug_forgot_password_stage_emailed>
 
@@ -1095,7 +1095,7 @@ is active.
     </tmpl_if>
 
 This indicator signals that the user attempted to use too short of a new
-password (the length is controlled with the C<min_pass> plugin's argumeant).
+password (the length is controlled with the C<min_pass> plugin's argument).
 
 =head2 C<plug_forgot_password_stage_code_bad_pass_copy>
 
@@ -1132,7 +1132,7 @@ cover all the bases:
 
     <p>If you did not request anything, simply ignore this email.</p>
 
-You can change this using C<email_template> argumeant. When using your
+You can change this using C<email_template> argument. When using your
 own, use C<< <tmpl_var escape='html' name='link'> >> to insert the
 link the user needs to follow.
 
@@ -1164,7 +1164,7 @@ link the user needs to follow.
 
 This is the form that asks the user for their login in order to reset
 the password. Submit button is plugin's default code, you can control
-it with the C<button_send_link> plugin's argumeant.
+it with the C<button_send_link> plugin's argument.
 
 =head2 "New Password" Form Template
 
@@ -1208,7 +1208,7 @@ it with the C<button_send_link> plugin's argumeant.
 This is the template for the form that asks the user for their new
 password, as well as the retype of it for confirmation purposes. The code
 for the submit button is what the plugin uses by default
-(see C<button_change_pass> plugin's argumeant).
+(see C<button_change_pass> plugin's argument).
 
 =head2 "Email Sent" Message
 
@@ -1233,7 +1233,7 @@ invalid (expired) reset code.
 
 This will be shown when the plugin has done its business and the password
 has been reset. Note that the "log in" text will only be a link if
-C<login_page> plugin's argumeant is set; otherwise it will be plain text.
+C<login_page> plugin's argument is set; otherwise it will be plain text.
 
 =head1 REQUIRED MODUILES
 

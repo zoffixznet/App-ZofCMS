@@ -259,7 +259,7 @@ and push data to/from SQL databases using L<DBI> module.
 Current functionality is limited. More will be added as the need arrises,
 let me know if you need something extra.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 DSN AND CREDENTIALS
@@ -313,10 +313,10 @@ pass to C<connect_cached> L<DBI>'s method.
 B<Optional>. When set to a true value, the plugin will attempt to figure out the
 C<LAST_INSERT_ID()> after processing C<dbi_set> (see below). The result will be placed
 into C<d> ZofCMS Template special key under key C<last_insert_id> (currently there is no
-way to place it anywhere else). The value of C<last_insert_id> argumeant can be either a true
+way to place it anywhere else). The value of C<last_insert_id> argument can be either a true
 value or an arrayref. Having any true value but an arrayref is the same as having an
 arrayref with three C<undef>s. That arrayref will be directly dereferenced into L<DBI>'s
-C<last_insert_id()> method. See documeantation for L<DBI> for more information.
+C<last_insert_id()> method. See documentation for L<DBI> for more information.
 B<By default is not specified> (false)
 
 =head2 C<do_dbi_set_first>
@@ -382,7 +382,7 @@ ZofCMS Template hashref, $config is the L<App::ZofCMS::Config> object and C<$dbh
 L<DBI> database handle (already connected).
 
 If the value is a hashref it is the same as having just that hashref
-inside the arrayref. Each elemeant of the arrayref must be a hashref with
+inside the arrayref. Each element of the arrayref must be a hashref with
 instructions on how to retrieve the data. The possible keys/values of
 that hashref are as follows:
 
@@ -390,10 +390,10 @@ that hashref are as follows:
 
     layout  => [ qw/name pass time info/ ],
 
-B<Optional>. Takes an arrayref as an argumeant.
+B<Optional>. Takes an arrayref as an argument.
 Specifies the name of C<< <tmpl_var name=""> >>s in your
-C<< <tmpl_loop> >> (see C<type> argumeant below) to which map the columns
-retrieved from the database, see C<SYNOPSIS> section above. If the second elemeant in your
+C<< <tmpl_loop> >> (see C<type> argument below) to which map the columns
+retrieved from the database, see C<SYNOPSIS> section above. If the second element in your
 C<sql> arrayref is a hashref with a key C<Slice> whose value is a hashref, then C<layout>
 specifies which keys to keep, since C<selectall_arrayref()> (the only currently supported
 method) will return an arrayref of hashrefs where keys are column names and values are
@@ -404,8 +404,8 @@ case all column names will be kept. B<By default> is not specified.
 
     sql => [ 'SELECT * FROM bar' ],
 
-B<Mandatory>. Takes an arrayref as an argumeant which will be directly
-dereferenced into the L<DBI>'s method call specified by C<method> argumeant
+B<Mandatory>. Takes an arrayref as an argument which will be directly
+dereferenced into the L<DBI>'s method call specified by C<method> argument
 (see below). See L<App::ZofCMS::Plugin::Tagged> for possible expansion
 of possibilities you have here.
 
@@ -417,7 +417,7 @@ B<Optional>. Takes either true or false values. Normally, the plugin will make
 a datastructure suitable for a C<< <tmpl_loop name=""> >>; however, if you expecting
 only one row from the table to be returned you can set C<single> parameter B<to a true value>
 and then the plugin will stuff appropriate values into C<{t}> special hashref where keys will
-be the names you specified in the C<layout> argumeant and values will be the values of the
+be the names you specified in the C<layout> argument and values will be the values of the
 first row that was fetched from the database. B<By default is not specified> (false)
 
 =head3 C<single_prefix>
@@ -449,7 +449,7 @@ B<Defaults to:> C<loop>
     ...
 
 B<Optional>. Specifies the name of the key in the C<cell> (see below) into
-which to stuff your data. With the default C<cell> argumeant this will
+which to stuff your data. With the default C<cell> argument this will
 be the name of a L<HTML::Template> var to set. B<Defaults to:> C<dbi_var>
 
 =head3 C<method>
@@ -480,7 +480,7 @@ C<t> (the data will be available in your L<HTML::Template> templates)
         on_data => 'has_data',
     ...
 
-B<Optional>. Takes a string as an argumeant. When specified will set the key in C<{t}> name of
+B<Optional>. Takes a string as an argument. When specified will set the key in C<{t}> name of
 which is specified C<on_data> to C<1> when there are any rows that were selected. Typical
 usage for this would be to display some message if no data is available; e.g.:
 
@@ -538,7 +538,7 @@ hashref and L<App::ZofCMS::Config> object.
     ]
 
 B<Note:> the C<dbi_set> will be processed B<before> C<dbi_get>. Takes
-either a subref or an arrayref as an argumeant. Multiple instructions
+either a subref or an arrayref as an argument. Multiple instructions
 can be put inside an arrayref as the last example above demonstrates. Each
 arrayref will be directly dereferenced into L<DBI>'s C<do()> method. Each
 subref must return either a single scalar, an arrayref or an arrayref

@@ -65,11 +65,11 @@ In your L<HTML::Template> template:
 =head1 DESCRIPTION
 
 The module is a small plugin for L<App::ZofCMS>. Its purpose is to automatically generate a
-value for an C<id=""> attribute that is to be put on C<< <body> >> HTML elemeant; this value
+value for an C<id=""> attribute that is to be put on C<< <body> >> HTML element; this value
 would be used to differentiate different pages on the site and is generated from query C<dir>
 and C<page> parameters.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config>
 and L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE OR ZofCMS TEMPLATE
@@ -103,7 +103,7 @@ Most of the time it will be the slashes (C</>) present in the full page URL.
 
 =head1 GENERATED IDs
 
-After doing invalid character replacemeant (see above) the plugin prefixes the generated value
+After doing invalid character replacement (see above) the plugin prefixes the generated value
 with word "C<page>". Considering that any page URL would start with a slash, the resulting
 values would be in the form of C<page_index>, C<page_somedir_about-us> and so on.
 

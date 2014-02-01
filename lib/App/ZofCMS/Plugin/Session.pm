@@ -143,9 +143,9 @@ requests.
 
 B<The docs for this plugin are incomplete>
 
-B<This plugin requires ZofCMS version of at least 0.0211 where multi-level plugin sets are implemeanted>
+B<This plugin requires ZofCMS version of at least 0.0211 where multi-level plugin sets are implemented>
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
 
@@ -214,7 +214,7 @@ will use to store data. B<Defaults to:> C<session>
 
 B<Optional>. Takes either true or false values. When set to a true value, the plugin will
 automatically create the database table that it nees for operation. B<Defaults to:> C<0>.
-Here is the table that it creates (C<$conf{table}> is the C<table> plugin's argumeant):
+Here is the table that it creates (C<$conf{table}> is the C<table> plugin's argument):
 
     CREATE TABLE `$conf{table}` (
         `id`      TEXT,
@@ -231,7 +231,7 @@ More options to come soon!
 =head1 MORE INFO
 
 See source code, much of it is understandable (e.g. that session cookies last for 24 hours).
-I'll write better documeantation once I get more time.
+I'll write better documentation once I get more time.
 
 =head1 REPOSITORY
 

@@ -74,7 +74,7 @@ The idea for this plugin came to me when I was constantly writing "little testin
 that would tell me whether or not a particular module was installed on the crappy
 server that I have to work with all the time.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
 L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
@@ -98,7 +98,7 @@ B<Mandatory>. You need to include the plugin in the list of plugins to execute.
 
 B<Mandatory>. Takes an arrayref as a value.
 Can be specified in either ZofCMS Template or Main Config File; if set in
-both, the value in ZofCMS Template takes precedence. Each elemeant of the arrayref
+both, the value in ZofCMS Template takes precedence. Each element of the arrayref
 must be a module name that you wish to check for "installedness".
 
 =head1 OUTPUT

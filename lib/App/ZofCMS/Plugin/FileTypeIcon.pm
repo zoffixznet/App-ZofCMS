@@ -112,7 +112,7 @@ In your ZofCMS Template or Main Config File:
         resource    => 'pics/fileicons/',
         prefix      => 'fileicon_',
         as_arrayref => 0, # put all files into an arrayref at $t->{t}{ $prefix }
-        only_path   => 0, # i.e. do not generate the <img> elemeant
+        only_path   => 0, # i.e. do not generate the <img> element
         icon_width  => 16,
         icon_height => 16,
         code_after  => sub {
@@ -135,7 +135,7 @@ The module is a plugin for L<App::ZofCMS> that provides a method to show pretty 
 that vary depending on the extension of the file (which is just a string as far as the module
 is concerned).
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
 L<App::ZofCMS::Template>
 
 =head1 GETTING THE IMAGES FOR THE ICONS
@@ -180,7 +180,7 @@ to use this plugin with some other plugins, so make sure to get priority right.
         resource    => 'pics/fileicons/',
         prefix      => 'fileicon_',
         as_arrayref => 0, # put all files into an arrayref at $t->{t}{ $prefix }
-        only_path   => 0, # i.e. do not generate the <img> elemeant
+        only_path   => 0, # i.e. do not generate the <img> element
         icon_width  => 16,
         icon_height => 16,
         code_after  => sub {
@@ -223,16 +223,16 @@ are valid in C<plug_file_type_icon>:
 
 B<Mandatory>. The C<files> key takes either an arrayref, a subref or a hashref as a value.
 If its value is B<NOT> an arrayref, then it will be converted to an arrayref with just one
-elemeant - the original value.
+element - the original value.
 
-The elemeants of C<files> arrayref can be strings, hashrefs or subrefs. If the value is a
+The elements of C<files> arrayref can be strings, hashrefs or subrefs. If the value is a
 subref, the sub will be executed and its return value will replace the subref. The
 C<@_> of the sub will contain C<$t, $q, $conf> (in that order) where C<$t> is ZofCMS Template
 hashref, C<$q> is a hashref of query parameters and C<$conf> is L<App::ZofCMS::Config> object.
 
-If the elemeant is a hashref, it must contain only one key/value pair and the key will be
+If the element is a hashref, it must contain only one key/value pair and the key will be
 treated as a filename to process and the value will become the name of the key in C<t> ZofCMS
-special key (see C<prefix> key below). If the elemeant is a regular string, then it will be
+special key (see C<prefix> key below). If the element is a regular string, then it will be
 treated as a filename to process.
 
 =head3 C<resource>
@@ -247,14 +247,14 @@ B<Defaults to:> C<pics/fileicons/>
 
     prefix => 'fileicon_',
 
-B<Optional>. When the plugin generates path to the icon or the C<< <img> >> elemeant, it
+B<Optional>. When the plugin generates path to the icon or the C<< <img> >> element, it
 will stick it into C<t> ZofCMS special key. The C<prefix> key takes a string as a value and
 specifies the prefix to use for keys in C<t> ZofCMS special key. If C<as_arrayref> key
 (see below) is set to a true value, then C<prefix> will specify the name of the key, in
-C<t> ZofCMS special key where to store that arrayref. When the elemeant of C<files> arrayref
+C<t> ZofCMS special key where to store that arrayref. When the element of C<files> arrayref
 is a hashref, the value of the only key in that hashref will become the name of the
 key in C<t> special key B<WITHOUT> the C<prefix>; otherwise, the name will be constructed
-by using C<prefix> and a counter; the elemeants of C<files> arrayref that are hashrefs do
+by using C<prefix> and a counter; the elements of C<files> arrayref that are hashrefs do
 not increase that counter. B<Defaults to:> C<fileicon_> (note that underscore at the end)
 
 =head3 C<as_arrayref>
@@ -263,14 +263,14 @@ not increase that counter. B<Defaults to:> C<fileicon_> (note that underscore at
 
 B<Optional>. Takes either true or false values.
 When set to a true value, the plugin will create an arrayref of generated
-C<< <img> >> elemeants (or just paths) and stick it in C<t> special key under C<prefix> (see above) key. B<Defaults to:> C<0>
+C<< <img> >> elements (or just paths) and stick it in C<t> special key under C<prefix> (see above) key. B<Defaults to:> C<0>
 
 =head3 C<only_path>
 
     only_path   => 0,
 
 B<Optional>. Takes either true or false values. When set to a true value, the plugin will
-not generate the code for C<< <img> >> elemeants, but instead it will only provide paths
+not generate the code for C<< <img> >> elements, but instead it will only provide paths
 to appropriate icon image. B<Defaults to:> C<0>
 
 =head3 C<icon_width> and C<icon_height>
@@ -299,8 +299,8 @@ C<$conf> is L<App::ZofCMS::Config> object. B<By defaults:> is not specified.
 
     xhtml => 0,
 
-B<Optional>. If you wish to close C<< <img> >> elemeants as to when you're writing XHTML, then
-set C<xhtml> argumeant to a true value. B<Defaults to:> C<0>
+B<Optional>. If you wish to close C<< <img> >> elements as to when you're writing XHTML, then
+set C<xhtml> argument to a true value. B<Defaults to:> C<0>
 
 =head1 GENERATED HTML CODE
 

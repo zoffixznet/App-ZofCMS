@@ -111,7 +111,7 @@ Produces this code:
 The plugin doesn't do much but after writing HTML code for hundreds of
 navigation bars I was fed up... and released this tiny plugin.
 
-This documeantation assumes you've read L<App::ZofCMS>,
+This documentation assumes you've read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE AND ZofCMS TEMPLATE FIRST LEVEL KEYS
@@ -153,13 +153,13 @@ order), where C<$template> is the ZofCMS Template hashref, C<$query> is the quer
 (param names are keys and values are their values) and C<$config> is the
 L<App::ZofCMS::Config> object.
 
-The elemeants of the arrayref (whether directly assigned or returned from the subref)
+The elements of the arrayref (whether directly assigned or returned from the subref)
 can either be strings
-or arrayrefs, elemeant which is a string is the same as an arrayref with just
-that string as an elemeant. Each of those arrayrefs can contain from one
-to four elemeants. They are interpreted as follows:
+or arrayrefs, element which is a string is the same as an arrayref with just
+that string as an element. Each of those arrayrefs can contain from one
+to four elements. They are interpreted as follows:
 
-=head3 first elemeant
+=head3 first element
 
     nav_maker => [ qw/Foo Bar Baz/ ],
 
@@ -173,38 +173,38 @@ to four elemeants. They are interpreted as follows:
 
 B<Mandatory>. Specifies the text to use for the link.
 
-=head3 second elemeant
+=head3 second element
 
     nav_maker => [
         [ Foo => '/foo' ],
     ],
 
 B<Optional>. Specifies the C<href=""> attribute for the link. If not
-specified will be calculated from the first elemeant (the text for the link)
+specified will be calculated from the first element (the text for the link)
 in the following way:
 
     $text =~ s/[\W_]/-/g;
     return lc "/$text";
 
-=head3 third elemeant
+=head3 third element
 
     nav_maker => [
         [ 'Foo', '/foo', 'Title text' ],
     ],
 
 B<Optional>. Specifies the C<title=""> attribute for the link. If not
-specified the first elemeant (the text for the link) will be used for the
+specified the first element (the text for the link) will be used for the
 title with word C<Visit > prepended.
 
-=head3 fourth elemeant
+=head3 fourth element
 
     nav_maker => [
         [ 'Foo', '/foo', 'Title text', 'id_of_the_li' ]
     ],
 
-B<Optional>. Specifies the C<id=""> attribute for the C<< <li> >> elemeant
+B<Optional>. Specifies the C<id=""> attribute for the C<< <li> >> element
 of this navigation bar item. If not specified will be calculated from the
-first elemeant (the text of the link) in the following way:
+first element (the text of the link) in the following way:
 
     $text =~ s/\W/_/g;
     return lc "nav_$text";

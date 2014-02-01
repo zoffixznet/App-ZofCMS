@@ -84,7 +84,7 @@ In your Main Config File or ZofCMS Template:
         qw/Barcode/
     ],
 
-    # direct output to browser with default values for optional argumeants
+    # direct output to browser with default values for optional arguments
     plug_barcode => {
         code => '12345678901',
     },
@@ -113,7 +113,7 @@ The module is a plugin for L<App::ZofCMS> that provides means to generate variou
 types of barcodes and either output them directly to the browser or save them as
 an image.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
 L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
@@ -135,7 +135,7 @@ run anything that needs to be run before that point.
 
 =head2 C<plug_barcode>
 
-    # direct output to browser with default values for optional argumeants
+    # direct output to browser with default values for optional arguments
     plug_barcode => {
         code => '12345678901',
     },

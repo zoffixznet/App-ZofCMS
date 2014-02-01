@@ -89,7 +89,7 @@ App::ZofCMS::Plugin::GooglePageRank - Plugin to show Google Page Ranks
 =head1 DESCRIPTION
 
 The module is a plugin for L<App::ZofCMS> that provides means to obtain Google Page Rank.
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
 
@@ -193,7 +193,7 @@ to put the results. B<Defaults to:> C<plug_google_page_rank>
 
 =head1 OUTPUT
 
-Depending on whether the C<uri> argumeant was set to a string (or not set at all) or an
+Depending on whether the C<uri> argument was set to a string (or not set at all) or an
 arrayref the output will be either a string indicating page's rank or an arrayref of
 hashrefs - enabling you to use a simple C<< <tmpl_loop> >>, each of the hashrefs will contain two keys: C<rank> and C<uri> - the rank of
 the page referenced by that URI.

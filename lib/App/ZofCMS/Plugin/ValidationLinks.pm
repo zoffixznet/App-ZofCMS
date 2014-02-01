@@ -60,7 +60,7 @@ a really bad memory on URIs and sick and tired of looking up all those links. Th
 L<http://validator.w3.org/check?uri=referer> for (X)HTML and
 L<http://jigsaw.w3.org/css-validator/check/referer> for CSS.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE AND ZofCMS TEMPLATE FIRST-LEVEL KEYS
 
@@ -101,7 +101,7 @@ B<Optional>. Specifies the text for the "validate CSS" link. B<Defaults to:> C<V
         xhtml       => 0,
     },
 
-B<Optional>. Pretty much the only purpose of this argumeant is for the C<title="">
+B<Optional>. Pretty much the only purpose of this argument is for the C<title="">
 attribute of the "validate (X)HTML" link. Takes either true or false values.
 When set to a true value the link will have
 C<title="Validate XHTML code on this page">, when set to a false value
@@ -130,7 +130,7 @@ Will contain the link to CSS validator to validate the current page.
 =head1 NOTES ON TESTING
 
 The W3C validator cannot validate pages that are not publicly accessible, i.e. (possibly) your
-developmeant server; thus clicking the links from your local version of site will make
+development server; thus clicking the links from your local version of site will make
 the validator error out.
 
 =head1 REPOSITORY

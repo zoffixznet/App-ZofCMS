@@ -186,7 +186,7 @@ In your L<HTML::Template> template:
 The module is a ZofCMS plugin which provides means to easily handle file
 uploads.
 
-This documeantation assumes you've read
+This documentation assumes you've read
 L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE KEYS
@@ -232,8 +232,8 @@ plugins.
 
 Plugin takes input from C<file_upload> first level ZofCMS template key which
 takes an arrayref or a hashref as a value. Passing a hashref as a value
-is the same as passing an arrayref with just that hashref as an elemeant.
-Each elemeant of the given arrayref is a hashref which
+is the same as passing an arrayref with just that hashref as an element.
+Each element of the given arrayref is a hashref which
 represents one file upload. The possible keys/values of those hashrefs
 are as follows:
 
@@ -275,7 +275,7 @@ from the concatenation of those two. If a I<scalarref> is specified
 (irrelevant of its value), the plugin will use the filename that the
 browser gave it (relying on L<File::Spec::Functions>'s
 C<splitpath> here; also, note that extension will be obtained
-using C<ext> argumeant (see below). The C<name> parameter can also take
+using C<ext> argument (see below). The C<name> parameter can also take
 a subref, if that's the case, then the C<name> parameter will obtain
 its value from the return value of that subref. The subref's C<@_> will
 contain the following (in that order): ZofCMS Template hashref, hashref
@@ -308,7 +308,7 @@ will be stripped. B<By default> is not specified.
 
 B<Optional>. Takes either a scalar string or an arrayref of strings.
 Specifying a string is equivalent to specifying an arrayref with just that
-string as an elemeant. Each element of the given arrayref indicates the
+string as an element. Each element of the given arrayref indicates the
 allowed Content-Type of the uploaded files. If the Content-Type does
 not match allowed types the error will be shown (see HTML TEMPLATE VARS
 section below). B<By default> all Content-Types are allowed.
@@ -322,7 +322,7 @@ section below). B<By default> all Content-Types are allowed.
 
 B<Optional>. Takes a subref as a value. The specified sub will be
 executed upon a successful upload. The C<@_> will contain the following
-elemeants: C<$uploaded_file_name, $template, $query, $config> where
+elements: C<$uploaded_file_name, $template, $query, $config> where
 C<$uploaded_file_name> is the directory + name + extension of the local
 file into which the upload was stored, C<$template> is a hashref of
 your ZofCMS template, C<$query> is a hashref of query parameters and

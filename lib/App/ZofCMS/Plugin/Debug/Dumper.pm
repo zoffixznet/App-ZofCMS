@@ -86,7 +86,7 @@ The module is a small debugging plugin for L<App::ZofCMS>. It uses L<Data::Dumpe
 make dumps of 5 things and sticks them into C<{t}> ZofCMS template key so you could display
 the dumps in your L<HTML::Template> template for debugging purposes.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config>
 and L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE OR ZofCMS TEMPLATE

@@ -215,7 +215,7 @@ have meaning for ZofCMS core:
 
 The C<data_store> key specifies the directory (relative you C<index.pl>)
 with your "data", i.e. the L<HTML::Template> files which you can reference
-from ZofCMS templates. More on this in L<App::ZofCMS::Template> documeantation
+from ZofCMS templates. More on this in L<App::ZofCMS::Template> documentation
 
 =head2 C<templates>
 
@@ -225,8 +225,8 @@ from ZofCMS templates. More on this in L<App::ZofCMS::Template> documeantation
 
 Alike C<data_store>, C<templates> key points to the directory where you
 keep your ZofCMS template files which are explained in
-L<App::ZofCMS::Template> documeantation. B<Note:> the value of this key is
-refered to as "templates dir" in the documeantation below.
+L<App::ZofCMS::Template> documentation. B<Note:> the value of this key is
+refered to as "templates dir" in the documentation below.
 
 =head2 C<valid_pages>
 
@@ -248,7 +248,7 @@ The C<valid_pages> specify which particular pages are available on your
 site. If the page provided to C<index.pl> via C<page> and (optionally)
 C<dir> parameter does not match C<valid_page> the user will be presented
 with a 404 - Not Found page. The C<valid_pages> value is a hashref with
-two keys each of which takes an arrayref as an argumeant; they are explained
+two keys each of which takes an arrayref as an argument; they are explained
 a little further below, but first:
 
 =head3 Note on C<page> and C<dir> query parameters
@@ -301,7 +301,7 @@ pages from C<pages> arrayref failed then the check against C<dirs> is done.
     ],
 
 The check for valid pages using C<dirs> arrayref is a bit different and
-serves as a shortcut of some sort. What is done with the elemeants in
+serves as a shortcut of some sort. What is done with the elements in
 C<dirs> arrayref is ZofCMS makes a path and a filename in the following
 form: $templates_dir (see above) + $dir_param (query parameter C<dir>)
 + $page_param (query parameter C<page>) + C<'.tmpl'> then it checks
@@ -320,7 +320,7 @@ and display a page, any other pages would give him a 404.
 
 B<Note:> directories specified in C<dirs> arrayref are not recursable, i.e.
 specifying C<< dirs => [ '/' ] >>  enable pages in '/tools/'. Later, a
-special flag to indicate recursing may be implemeanted.
+special flag to indicate recursing may be implemented.
 
 =head2 C<template_defaults>
 
@@ -393,7 +393,7 @@ processed.
 
     { zcms_template_extension => '.tmpl', }
 
-B<Optional>. The C<zcms_template_extension> key takes a string as an argumeant. This string
+B<Optional>. The C<zcms_template_extension> key takes a string as an argument. This string
 represents the extensions for your ZofCMS Template files. B<Defaults to:> C<.tmpl>
 
 =head1 METHODS
@@ -407,7 +407,7 @@ is described in L<App::ZofCMS::Template>
 
     my $cgi = $config->cgi;
 
-Takes no argumeants, returns a L<CGI> object which is created during
+Takes no arguments, returns a L<CGI> object which is created during
 loading of your main config file.
 
 =head2 C<query>
@@ -416,13 +416,13 @@ loading of your main config file.
 
     $config->query( { new => 'query', param => 'value' } );
 
-Takes an optional argumeant which must be a hashref. The keys of this
+Takes an optional argument which must be a hashref. The keys of this
 hashref will appear as if they are query parameters and the values will
 appear as if they are values of those parameters by any
 plugins/exec_before/exec code which processes query after your call.
 Returns a hashref keys of which represent query parameters and values
 are obviously values of those parameters. B<Note:> this hashref
-is created from L<CGI>'s C<Vars()> function. Refer to L<CGI> documeantation
+is created from L<CGI>'s C<Vars()> function. Refer to L<CGI> documentation
 if something doesn't look right.
 
 =head2 C<conf>
@@ -430,7 +430,7 @@ if something doesn't look right.
     my $conf = $config->conf;
     $config->conf( { data_store => '../zcms_site/data' } );
 
-Returns the hashref of your main config file. Takes one optional argumeant
+Returns the hashref of your main config file. Takes one optional argument
 which is a hashref, it will be appear as if it was loaded from your
 main config file -- bad idea to set it like this, in my opinion.
 

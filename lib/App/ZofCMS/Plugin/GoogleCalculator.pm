@@ -79,7 +79,7 @@ In HTML::Template template:
 
 The module is a plugin for L<App::ZofCMS> that provides a simple interface to Google
 calculator (L<http://www.google.com/help/calculator.html>).
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
 L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
@@ -127,15 +127,15 @@ Hashref's keys/values are as follows:
 
 B<Optional>. Takes either true or false values. When set to a true value, the expression
 to calculate will be taken from query parameters and parameter's name will be derived
-from C<q_name> argumeant (see below). When set to a false value, the expression will
-be taken from C<expr> argumeant (see below) directly. B<Defaults to:> C<1>
+from C<q_name> argument (see below). When set to a false value, the expression will
+be taken from C<expr> argument (see below) directly. B<Defaults to:> C<1>
 
 =head3 C<q_name>
 
     plug_google_calculator => {
         q_name     => 'calc',
 
-B<Optional>. When C<from_query> argumeant is set to a true value, specifies the name
+B<Optional>. When C<from_query> argument is set to a true value, specifies the name
 of the query parameter from which to gather the expression to calculate.
 B<Defaults to:> C<calc>
 
@@ -152,7 +152,7 @@ B<Defaults to:> C<calc>
         },
     }
 
-B<Optional>. When C<from_query> argumeant is set to a false value, specifies the expression
+B<Optional>. When C<from_query> argument is set to a false value, specifies the expression
 to calculate. Takes either a literal expression as a string or a subref as a value.
 When set to a subref, subref will be executed and its return value will be assigned
 to C<expr> as if it was already there (note, C<undef>s will cause the plugin to

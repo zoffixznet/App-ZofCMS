@@ -148,7 +148,7 @@ In your L<HTML::Template> template:
 The module is a plugin for L<App::ZofCMS>; it generates "tag clouds" (bunch of different-sized
 links).
 
-This documeantation assumes you have read L<App::ZofCMS>,
+This documentation assumes you have read L<App::ZofCMS>,
 L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 ZofCMS TEMPLATE/MAIN CONFIG FILE KEYS
@@ -197,15 +197,15 @@ The key takes a hashref as a value. Possible keys/values of that hashref are as 
     ],
 
 B<Mandatory>.
-The C<tags> key takes an arrayref as a value. Elemeants of that arrayref can be either
-either plain strings or arrayrefs. You cannot mix the two. If elemeants are plain strings
+The C<tags> key takes an arrayref as a value. Elements of that arrayref can be either
+either plain strings or arrayrefs. You cannot mix the two. If elements are plain strings
 they will be converted internally into the "arrayref form" by grouping by three
 (see examples above, they are equivalent).
 
-The elemeants of the inner arrayrefs are as follows: B<first element> is the text for the
-link in the tag cloud. B<Second elemeant> is the URI to which the tag points.
-B<Third elemeant> is the "weight" of the tag, the larger the number the larger the tag will be.
-The third elemeant actually also serves for the C<font-size> value in the CSS code generated
+The elements of the inner arrayrefs are as follows: B<first element> is the text for the
+link in the tag cloud. B<Second element> is the URI to which the tag points.
+B<Third element> is the "weight" of the tag, the larger the number the larger the tag will be.
+The third element actually also serves for the C<font-size> value in the CSS code generated
 by the plugin.
 
 =head2 C<id>
@@ -214,7 +214,7 @@ by the plugin.
 
 B<Optional>.
 The C<id> key takes a string as a value. This sting will be used for the C<id=""> attribute
-of the tag cloud C<< <ul> >> elemeant. B<Defaults to:> C<zofcms_tag_cloud>
+of the tag cloud C<< <ul> >> element. B<Defaults to:> C<zofcms_tag_cloud>
 
 =head2 C<class>
 
@@ -239,7 +239,7 @@ CSS code and the number for that unit will be taken from the "weight" of the clo
     shuffle => 1,
 
 B<Optional>.
-Takes either true or false value. When set to a true value the elemeants of your tag cloud
+Takes either true or false value. When set to a true value the elements of your tag cloud
 will be shuffled each and every time. B<Default to:> C<0>
 
 =head2 C<uri_prefix>
@@ -255,7 +255,7 @@ URIs to which your tags are pointing. B<Defaults to:> empty string.
     fg => '#00d',
 
 B<Optional>.
-Specifies the color to use for foreground on C<< <a href=""> >> elemeants;
+Specifies the color to use for foreground on C<< <a href=""> >> elements;
 will be directly used for C<color> property in
 generated CSS code. B<Defaults to:> C<#00d>.
 
@@ -264,7 +264,7 @@ generated CSS code. B<Defaults to:> C<#00d>.
     bg => 'transparent',
 
 B<Optional>.
-Specifies the color to use for background on C<< <a href=""> >> elemeants;
+Specifies the color to use for background on C<< <a href=""> >> elements;
 will be directly used for C<background> property in
 generated CSS code. B<Defaults to:> C<transparent>.
 

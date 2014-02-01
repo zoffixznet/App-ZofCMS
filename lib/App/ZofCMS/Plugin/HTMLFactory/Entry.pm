@@ -50,7 +50,7 @@ C<App::ZofCMS::Plugin::HTMLFactory::> namespace thus only provides some packed H
 I use the HTML code provided by the plugin virtually on every site, and am sick and tired of
 writing it! Hence the plugin.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
 
 =head1 MAIN CONFIG FILE AND ZofCMS TEMPLATE FIRST-LEVEL KEYS
 

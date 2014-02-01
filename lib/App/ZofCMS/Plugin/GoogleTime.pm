@@ -102,7 +102,7 @@ In HTML::Template file:
 The module is a plugin for L<App::ZofCMS> that provides means to obtain times for different
 locations using Google.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
 L<App::ZofCMS::Template>
 
 =head1 FIRST-LEVEL ZofCMS TEMPLATE AND MAIN CONFIG FILE KEYS
@@ -165,7 +165,7 @@ B<Mandatory>. Specifies location(s) for which you wish to obtain times.
 The value can be either a direct string, an arrayref or a subref.
 When value is a subref, its C<@_> will contain
 (in that order): ZofCMS Template hashref, query parameters hashref and L<App::ZofCMS::Config>
-object. The return value of the sub will be assigned to C<location> argumeant
+object. The return value of the sub will be assigned to C<location> argument
 as if it was already there.
 
 The single string vs. arrayref values affect the output format (see section below).
@@ -189,7 +189,7 @@ accessing Google. B<Defaults to:>
 
 =head1 PLUGIN'S OUTPUT
 
-    # location argumeant set to a string
+    # location argument set to a string
     <tmpl_if name='plug_google_time_error'>
         <p class="error">Got error: <tmpl_var escape='html' name='plug_google_time_error'></p>
     <tmpl_else>
@@ -197,7 +197,7 @@ accessing Google. B<Defaults to:>
     </tmpl_if>
 
 
-    # location argumeant set to an arrayref
+    # location argument set to an arrayref
     <ul>
         <tmpl_loop name='plug_google_time'>
         <li>
@@ -212,15 +212,15 @@ accessing Google. B<Defaults to:>
 
 Plugin will set C<< $t->{t}{plug_google_time} >> (where C<$t> is ZofCMS Template
 hashref) to either a string or an
-arrayref when C<location> plugin's argumeant is set to a string or arrayref respectively. Thus,
+arrayref when C<location> plugin's argument is set to a string or arrayref respectively. Thus,
 for arrayref values you'd use a C<< <tmpl_loop> >> plugins will use three variables
 inside that loop: C<error>, C<time> and C<hash>; the C<error> variable will be present when
 an error occured during title fetching. The C<time> will be the formated string of the
 time including the location. The C<hash> variable will contain a hashref that is the
 output of C<data()> method of L<WWW::Google::Time> module. Order
-for arrayrefs will be the same as the order in C<location> argumeant.
+for arrayrefs will be the same as the order in C<location> argument.
 
-If C<location> argumeant was set to a single string, then C<{plug_google_time}> will contain
+If C<location> argument was set to a single string, then C<{plug_google_time}> will contain
 the formated time of the location, C<{plug_google_time_error}> will be set if an error
 occured and C<{plug_google_time_hash}> will contain the
 output of C<data()> method of L<WWW::Google::Time> module.

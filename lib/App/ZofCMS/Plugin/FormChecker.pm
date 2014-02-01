@@ -288,7 +288,7 @@ In your L<HTML::Template> template:
 
 The module is a plugin for L<App::ZofCMS> that provides nifteh form checking.
 
-This documeantation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
+This documentation assumes you've read L<App::ZofCMS>, L<App::ZofCMS::Config> and
 L<App::ZofCMS::Template>
 
 =head1 ZofCMS TEMPLATE/MAIN CONFIG FILE FIRST LEVEL KEYS
@@ -421,7 +421,7 @@ of the keys inside the C<{t}> key will be formed as follows:
 C<< $prefix . $query_param_name >> where C<$prefix> is the value of C<fill_prefix> key
 (see below) and C<$query_param_name> is the name of the query parameter.
 Of course, this alone wouldn't cut it for radio buttons or C<< <select> >>
-elemeants. For that, you need to set C<< select => 1 >> in the ruleset for that particular
+elements. For that, you need to set C<< select => 1 >> in the ruleset for that particular
 query parameter (see C<rules> key below); when C<select> rule is set to a true value then
 the names of the keys inside the C<{t}> key will be formed as follows:
 C<< $prefix . $query_param_name . '_' . $value >>. Where the C<$prefix> is the value
@@ -643,7 +643,7 @@ sub returns a false value, then test fails and form check stops and errors.
 
     param => 'param2',
 
-Takes a string as an argumeant; that string will be interpreted as a name of a query parameter.
+Takes a string as an argument; that string will be interpreted as a name of a query parameter.
 Values of the parameter that is currently being inspected and the one given as a value must
 match in order for the rule to succeed. The example above indicates that query parameter
 C<param> C<eq> query parameter C<param2>.
@@ -727,7 +727,7 @@ B<Defaults to:> C<Parameter $name must contain data if other parameters are not 
 This is the error for C<valid_values> rule. B<Defaults to:>
 C<Parameter $name must be $list_of_values> where C<$list_of_values> is the list of the
 values you specified in the arrayref given to C<valid_values> rule joined by commas and
-the last elemeant joined by word "or".
+the last element joined by word "or".
 
 =head4 C<param_error>
 

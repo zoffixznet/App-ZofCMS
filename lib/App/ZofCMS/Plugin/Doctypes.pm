@@ -124,7 +124,7 @@ In your L<HTML::Template> files
 
 =head1 DESCRIPTION
 
-If you are like me you definitely don't remember how to properly spell out the DOCTYPE (DOCumeant TYPE definition) in your pages and always rely on your editor or look it up. Well,
+If you are like me you definitely don't remember how to properly spell out the DOCTYPE (DOCument TYPE definition) in your pages and always rely on your editor or look it up. Well,
 fear no more! This little module contains all the common DTDs and will stuff them into C<{t}>
 ZofCMS template's special key for you to use.
 

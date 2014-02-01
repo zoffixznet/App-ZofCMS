@@ -354,8 +354,8 @@ see the following:
 
 =head1 DESCRIPTION
 
-This module is used internally by L<App::ZofCMS> and this documeantation
-explains how ZofCMS templates work. B<This documeantation assumes you have
+This module is used internally by L<App::ZofCMS> and this documentation
+explains how ZofCMS templates work. B<This documentation assumes you have
 read> L<App::ZofCMS::Config>.
 
 If you wish to make changes to this module, please contact the author.
@@ -390,7 +390,7 @@ are called.
 There are (currently) four special "first level" keys in ZofCMS template
 hashref. They will NOT be stuffed into <tmpl_var>s in the base template.
 Some plugins may take their input via "first level" keys, make sure to
-read the documeantation for any plugins you are using.
+read the documentation for any plugins you are using.
 
 =head2 C<t>
 
@@ -438,10 +438,10 @@ hashref).
 Special key C<plugins> takes an B<arrayref> as a value. Can be postfixed by a number to
 create several levels of plugin sets to run (allows to execute same plugins several times).
 The higher the number the later that plugin set will execute.
-Elemeants of this
-arrayref can be either scalars or hashrefs. If the elemeant is a scalar
+Elements of this
+arrayref can be either scalars or hashrefs. If the element is a scalar
 it will be treated as the name of the plugin to load/execute; in this
-case the "priority" of the plugin is set to 10000. If the elemeant is a
+case the "priority" of the plugin is set to 10000. If the element is a
 hashref, the key of that hashref will be treated as the name of the
 plugin to load and the value will be treated as the value for plugin's
 "priority".
@@ -483,7 +483,7 @@ is a hashref keys of which are also special.
     conf => { base => 'base.tmpl', }
 
 The C<base> key in C<conf> hashref specifies the "base" template to use.
-This is the "base" template meantioned above in the description of
+This is the "base" template mentioned above in the description of
 "first level" keys of ZofCMS template hashref.
 The value of C<base> key must be a scalar containing a filename of the
 L<HTML::Template> located in "data store" directory. Normally, this would
@@ -552,7 +552,7 @@ its C<@_> (in that order):
 
 If the value of C<exec_before> is a scalar with the name of the module,
 the C<@_> of C<sub execute {}> will look the same except the first
-elemeant will be $self (i.e. the object)
+element will be $self (i.e. the object)
 
 The return value of C<exec_before> code is disregarded.
 
@@ -582,7 +582,7 @@ from the very beginning. Possibility here is changing query parameters.
 
 =head1 NOTE ON C<exec_before> AND C<exec> keys
 
-They were implemeanted before the plugin system was in place. Currently
+They were implemented before the plugin system was in place. Currently
 I find little use for either of them. They will stay as possibilities
 in ZofCMS but I encourage you to write plugins instead.
 
