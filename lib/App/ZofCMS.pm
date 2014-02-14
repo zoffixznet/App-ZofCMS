@@ -20,6 +20,19 @@ This module is just the main documentation for ZofCMS framework. See
 L<USING THE FRAMEWORK> section below for explanation of how to use this
 framework.
 
+=head1 WARNING
+
+=for pod_spiffy start warning section
+
+I have no desire to continue development or maintenance of this framework.
+As far as I know, I am the only developer. My only ties to this
+framework is its use at $work and I am actively trying to switch
+to L<Catalyst>. For that reason,
+I strongly do NOT recommend you use this framework. Please see
+L<Mojolicious>, L<Dancer>, L<Dancer2>, or L<Catalyst> as alternatives.
+
+=for pod_spiffy end warning section
+
 =head1 DESCRIPTION
 
 ZofCMS stands for "Zoffix's Content Management System", however I prefer
@@ -220,10 +233,16 @@ How wonderful \o/
 
 =head1 REPOSITORY
 
+=for pod_spiffy start github section
+
 Fork this module on GitHub:
 L<https://github.com/zoffixznet/App-ZofCMS>
 
+=for pod_spiffy end github section
+
 =head1 BUGS
+
+=for pod_spiffy start bugs section
 
 To report bugs or request features, please use
 L<https://github.com/zoffixznet/App-ZofCMS/issues>
@@ -231,10 +250,15 @@ L<https://github.com/zoffixznet/App-ZofCMS/issues>
 If you can't access GitHub, you can email your request
 to C<bug-App-ZofCMS at rt.cpan.org>
 
+=for pod_spiffy end bugs section
+
 =head1 AUTHOR
 
-Zoffix Znet <zoffix at cpan.org>
-(L<http://zoffix.com/>, L<http://haslayout.net/>)
+=for pod_spiffy start author section
+
+=for pod_spiffy author ZOFFIX
+
+=for pod_spiffy end author section
 
 =head1 LICENSE
 

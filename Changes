@@ -1,5 +1,10 @@
 Revision history for App-ZofCMS
 
+1.001004 2014-02-14
+    - Added missing zofcms_helper that got left out during
+     conversion to dzil
+    - Added a big warning in the docs, discouraging people use this framework
+
 1.001003 2014-01-31
     - Fixed a stupid auto-replacement error of "ment" -> "meant"
      (read your "documeantation"!)
