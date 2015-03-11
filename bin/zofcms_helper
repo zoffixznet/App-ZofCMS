@@ -88,7 +88,19 @@ if ( $opts{pages} ) {
         }
         $dirs[-1] .= '.tmpl';
         my $data = File::Spec->catfile( $opts{core}, 'data', @dirs );
-        my $template = File::Spec->catfile( $opts{core}, 'templates', @dirs );
+
+        my @template_dirs = @dirs;
+        my $c = do( File::Spec->catfile( $opts{core}, 'config.txt' ) )
+            or die "Failed to load config.txt $@ $!";
+
+        if ( $c->{zcms_template_extension} ) {
+            $template_dirs[-1] =~ s/\.tmpl/$c->{zcms_template_extension}/;
+        }
+
+        my $template = File::Spec->catfile(
+                $opts{core}, 'templates', @template_dirs
+        );
+
         if ( -e $data ) {
             print "$data file exists, omitting...\n";
         }
