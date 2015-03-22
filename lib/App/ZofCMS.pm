@@ -27,9 +27,9 @@ framework.
 I have no desire to continue development or maintenance of this framework.
 As far as I know, I am the only developer. My only ties to this
 framework is its use at $work and I am actively trying to switch
-to L<Catalyst>. For that reason,
-I strongly do NOT recommend you use this framework. Please see
-L<Mojolicious>, L<Dancer>, L<Dancer2>, or L<Catalyst> as alternatives.
+to L<Mojolicious>. For that reason,
+I strongly recommend you do NOT use this framework. Please see
+L<Mojolicious>, L<Catalyst>, L<Dancer>, or L<Dancer2> as alternatives.
 
 =for pod_spiffy end warning section
 
