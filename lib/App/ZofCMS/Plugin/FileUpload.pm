@@ -88,6 +88,12 @@ sub _process_upload {
             $upload->{name} . $upload->{ext}
         );
     }
+    elsif ( ref $upload->{name} eq 'SCALAR' ) {
+        $upload->{name} = catfile(
+            $upload->{path},
+            ( $remote_filename =~ /([^.]+)(?:[.].+)?$/)[0] . $upload->{ext}
+        );
+    }
     else {
         $upload->{name} = catfile(
             $upload->{path},
