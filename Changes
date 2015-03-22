@@ -1,5 +1,9 @@
 Revision history for App-ZofCMS
 
+1.001006 2015-03-21
+    - Fixed FileUpload plugin not erroring out correctly for
+        too-large uploads (Fixes #7)
+
 1.001005 2015-03-10
     - Fixes #4: zofcms_helper must respect zcms_template_extension
 

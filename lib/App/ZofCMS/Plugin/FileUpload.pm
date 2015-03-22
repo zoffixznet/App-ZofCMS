@@ -51,6 +51,12 @@ sub _process_upload {
 
     my $cgi = $config->cgi;
     my $remote_filename = $cgi->param( $upload->{query} );
+
+    if ( not $remote_filename and $cgi->cgi_error ) {
+        $template->{t}{ $error_key } = $cgi->cgi_error;
+        return;
+    }
+
     return
         unless defined $remote_filename;
 
