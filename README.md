@@ -8,6 +8,23 @@ This module is just the main documentation for ZofCMS framework. See
 ["USING THE FRAMEWORK"](#using-the-framework) section below for explanation of how to use this
 framework.
 
+# WARNING
+
+<div>
+    <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-warning.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
+</div>
+
+I have no desire to continue development or maintenance of this framework.
+As far as I know, I am the only developer. My only ties to this
+framework is its use at $work and I am actively trying to switch
+to [Mojolicious](https://metacpan.org/pod/Mojolicious). For that reason,
+I strongly recommend you do NOT use this framework. Please see
+[Mojolicious](https://metacpan.org/pod/Mojolicious), [Catalyst](https://metacpan.org/pod/Catalyst), [Dancer](https://metacpan.org/pod/Dancer), or [Dancer2](https://metacpan.org/pod/Dancer2) as alternatives.
+
+<div>
+    </div></div>
+</div>
+
 # DESCRIPTION
 
 ZofCMS stands for "Zoffix's Content Management System", however I prefer
@@ -148,7 +165,7 @@ The `web` directory is what we would have as web accessible (containing
 
 The helper script stuffed a single file, `index.pl` into
 `/var/www/testsite/web/` directory and that's the only thing that ZofCMS
-cares about from that directory. __Note:__ make sure to remove the line
+cares about from that directory. **Note:** make sure to remove the line
 `use CGI::Carp qw/fatalsToBrowser/;` from `index.pl` before deploying
 your finished site live. See `CGI::Carp` for more information.
 
@@ -169,7 +186,7 @@ is the "base" [HTML::Template](https://metacpan.org/pod/HTML::Template) file, it
 all the keys from ZofCMS template. In the `templates` directory you will
 find `index.tmpl` and `404.tmpl`
 
-__Before we proceed any further__ I advise you to read documentation
+**Before we proceed any further** I advise you to read documentation
 for [App::ZofCMS::Config](https://metacpan.org/pod/App::ZofCMS::Config) and [App::ZofCMS::Template](https://metacpan.org/pod/App::ZofCMS::Template) as I am not going
 to explain what each key means; it is explained in aforementioned
 documentation in detail.
@@ -208,10 +225,22 @@ How wonderful \\o/
 
 # REPOSITORY
 
+<div>
+    <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-github.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
+</div>
+
 Fork this module on GitHub:
 [https://github.com/zoffixznet/App-ZofCMS](https://github.com/zoffixznet/App-ZofCMS)
 
+<div>
+    </div></div>
+</div>
+
 # BUGS
+
+<div>
+    <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-bugs.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
+</div>
 
 To report bugs or request features, please use
 [https://github.com/zoffixznet/App-ZofCMS/issues](https://github.com/zoffixznet/App-ZofCMS/issues)
@@ -219,10 +248,23 @@ To report bugs or request features, please use
 If you can't access GitHub, you can email your request
 to `bug-App-ZofCMS at rt.cpan.org`
 
+<div>
+    </div></div>
+</div>
+
 # AUTHOR
 
-Zoffix Znet <zoffix at cpan.org>
-([http://zoffix.com/](http://zoffix.com/), [http://haslayout.net/](http://haslayout.net/))
+<div>
+    <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-author.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
+</div>
+
+<div>
+    <span style="display: inline-block; text-align: center;"> <a href="http://metacpan.org/author/ZOFFIX"> <img src="http://www.gravatar.com/avatar/328e658ab6b08dfb5c106266a4a5d065?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F627d83ef9879f31bdabf448e666a32d5" alt="ZOFFIX" style="display: block; margin: 0 3px 5px 0!important; border: 1px solid #666; border-radius: 3px; "> <span style="color: #333; font-weight: bold;">ZOFFIX</span> </a> </span>
+</div>
+
+<div>
+    </div></div>
+</div>
 
 # LICENSE
 
