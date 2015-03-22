@@ -12,7 +12,7 @@ BEGIN {
     use_ok('Getopt::Long');
     use_ok('File::Path');
     use_ok('File::Copy');
-	use_ok( 'App::ZofCMS' );
+    use_ok( 'App::ZofCMS' );
     use_ok( 'App::ZofCMS::Config' );
     use_ok( 'App::ZofCMS::Template' );
     use_ok( 'App::ZofCMS::Output' );
