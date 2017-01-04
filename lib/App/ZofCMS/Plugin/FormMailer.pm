@@ -49,8 +49,8 @@ sub _do {
         time => scalar localtime(),
         host => $config->cgi->remote_host,
     );
-    $format =~ s/{:{([^}]+)}:}/$query{$1}/g;
-    $format =~ s/{:\[(time|host)\]:}/$specials{$1}/g;
+    $format =~ s/\{:\{([^}]+)}:}/$query{$1}/g;
+    $format =~ s/\{:\[(time|host)\]:}/$specials{$1}/g;
 
     require Mail::Send;
 

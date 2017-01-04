@@ -1,5 +1,8 @@
 Revision history for App-ZofCMS
 
+1.001007 2017-01-04
+    - Update for 5.26 '{' in regex stuff
+
 1.001006 2015-03-21
     - Fixed FileUpload plugin not erroring out correctly for
         too-large uploads (Fixes #7)

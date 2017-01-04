@@ -157,11 +157,11 @@ END_FORMAT
     }
 
     my $sent_time = localtime;
-    $format =~ s/{::{time}::}/$sent_time/g;
-    $format =~ s/{::{host}::}/$qn_conf->{sender_host}/g;
-    $format =~ s/{::{name}::}/$query->{quicknote_name}/g;
-    $format =~ s/{::{email}::}/$query->{quicknote_email}/g;
-    $format =~ s/{::{message}::}/$query->{quicknote_message}/g;
+    $format =~ s/\{::\{time}::}/$sent_time/g;
+    $format =~ s/\{::\{host}::}/$qn_conf->{sender_host}/g;
+    $format =~ s/\{::\{name}::}/$query->{quicknote_name}/g;
+    $format =~ s/\{::\{email}::}/$query->{quicknote_email}/g;
+    $format =~ s/\{::\{message}::}/$query->{quicknote_message}/g;
 
     return $format;
 }
