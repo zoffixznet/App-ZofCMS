@@ -227,8 +227,10 @@ sub sort_plugins {
                 next;
             }
 
-            @{ $_={} }{ qw/name priority/ } = %$_
-                if ref eq 'HASH' and 1 == keys %$_;
+            if (ref eq 'HASH' and 1 == keys %$_) {
+                my ($name, $priority) = %$_;
+                @{ $_={} }{ qw/name priority/ } = ($name, $priority);
+            }
         }
     }
 
